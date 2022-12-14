@@ -1,0 +1,54 @@
+{
+    "top-banner":[
+    {
+        "no":1,
+        "img": "https://assets.myntassets.com/w_245,c_limit,fl_progressive,dpr_2.0/assets/images/2022/12/7/2fafdf8e-a994-4d04-927a-693be9c6fe141670408555579-Main-Banner_Desktop_02.jpg"
+    },
+    {
+        "no":2,
+        "img": "https://assets.myntassets.com/w_245,c_limit,fl_progressive,dpr_2.0/assets/images/2022/12/7/248198d9-e440-4d41-8037-a27e51df36de1670408555590-Main-Banner_Desktop_03.jpg"
+    },
+    {
+        "no":3,
+        "img": "https://assets.myntassets.com/w_245,c_limit,fl_progressive,dpr_2.0/assets/images/2022/12/7/54bc3eee-bf81-4a45-adaf-cc09f34923de1670408555601-Main-Banner_Desktop_04.jpg"
+    },
+    {
+        "no":4,
+        "img": "https://assets.myntassets.com/w_245,c_limit,fl_progressive,dpr_2.0/assets/images/2022/12/7/afeea69a-f2e3-4b59-a5d9-73d5eaec2ad31670408555611-Main-Banner_Desktop_05.jpg"
+    },
+    {
+        "no":5,
+        "img": "https://assets.myntassets.com/w_245,c_limit,fl_progressive,dpr_2.0/assets/images/2022/12/7/149187f9-92b5-4327-95a5-d6c0c261e1191670408555621-Main-Banner_Desktop_06.jpg"
+    },
+    {
+        "no":6,
+        "img": "https://assets.myntassets.com/w_245,c_limit,fl_progressive,dpr_2.0/assets/images/2022/12/7/5a9385dc-78f4-4bca-bc85-69249637ec321670408555629-Main-Banner_Desktop_07.jpg"
+    },
+    {
+        "no":7,
+        "img": "https://assets.myntassets.com/w_245,c_limit,fl_progressive,dpr_2.0/assets/images/2022/12/7/6645c352-3849-43a4-91c7-d8e7c534f7fa1670408555636-Main-Banner_Desktop_08.jpg"
+    },
+    {
+        "no":8,
+        "img": "https://assets.myntassets.com/w_245,c_limit,fl_progressive,dpr_2.0/assets/images/2022/12/7/42069485-f49e-4a85-ad37-37298767afe11670408555646-Main-Banner_Desktop_09.jpg"
+    },
+    {
+        "no":9,
+        "img": "https://assets.myntassets.com/w_245,c_limit,fl_progressive,dpr_2.0/assets/images/2022/12/7/46748934-bb94-450f-b5d4-1d637eee8dea1670408555657-Main-Banner_Desktop_10.jpg"
+    },
+    {
+        "no":10,
+        "img": "https://assets.myntassets.com/w_245,c_limit,fl_progressive,dpr_2.0/assets/images/2022/12/7/770780a9-9fa2-4139-b421-ba1585044e2e1670408555667-Main-Banner_Desktop_11.jpg"
+    },
+    {
+        "no":11,
+        "img": "https://assets.myntassets.com/w_245,c_limit,fl_progressive,dpr_2.0/assets/images/2022/12/7/3dc00e54-6ca1-4768-a468-c0816768c56c1670408555678-Main-Banner_Desktop_12.jpg"
+    },
+    {
+        "no":12,
+        "img": "https://assets.myntassets.com/w_245,c_limit,fl_progressive,dpr_2.0/assets/images/2022/12/7/3dc00e54-6ca1-4768-a468-c0816768c56c1670408555678-Main-Banner_Desktop_12.jpg"
+    }
+    
+
+]
+}
