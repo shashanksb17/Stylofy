@@ -316,6 +316,173 @@
         font-size: 15px;
     }
     /* ----------------------footer end------------------------------------ */
+
+    #content{
+        margin-top: 25px;
+        display: flex;
+    }
+    #fcheck{
+       width: 15.8%; 
+    }
+    #filtercheck{
+        width: 100%;
+    }
+    #top>p{
+        font-size: 17px;
+        font-weight: 600;
+        margin-left: 10px;
+    }
+    #top{
+       display: flex; 
+       height: 45px;
+       justify-content: space-around;
+       align-items: center;
+    }
+    #top>p>span{
+        font-size: 13px;
+        color: #ff3f6c;
+        margin-left: 35px;
+    }
+    #radio>h5>input{
+        margin-right: 10px;
+        transform: scale(1.3);
+        accent-color: #ff3f6c;
+    }
+    #radio{
+        border: 1px solid rgb(220, 220, 220);
+        padding: 15px;
+    }
+   
+    #radio>h5{
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 7px;
+        margin-left: 8px;
+        font-weight: 600;
+        font-size: 14px;
+    }
+    #categories{
+        border: 1px solid rgb(220, 220, 220);
+        
+    }
+    #categories>p{
+        padding-left: 20px;
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+    #categories>p>span{
+        font-size: 11px;
+        color: gray;
+    }
+    #categories>p>img{
+        width: 15px;
+        height: 15px;
+        border: none;
+        border-radius: 50%;
+        
+    }
+    #categories input{
+        transform: scale(1.5);
+        margin-right: 15px;
+        margin-left: 8px;
+        accent-color: #ff3f6c;
+    }
+    #cat{
+        display: flex; 
+        height: 45px;
+        justify-content: space-between;
+        align-items: center;
+        padding:0px 20px;
+    }
+    #cat>img{
+        width: 38px;
+    }
+    #l{
+        margin-left: 35px;
+        padding: 10px 0px;
+        color: #ff3f6c;
+    }
+    #rightcontent{
+        /* border: 1px solid black; */
+        width: 100%;
+    }
+    #topbuttons{
+        /* border: 1px solid red; */
+        height: 43px;
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    #topbuttons>div>button{
+        padding: 0px 8px;
+        height: 25px;
+        margin: 10px 10px;
+        border: none;
+        border-radius: 20px;
+        background-color: white;
+    }
+    #topbuttons>div>button:hover{ 
+        background-color: #f4f4f5;
+    }
+    #topbuttons>div>button>img{
+        width: 15px;
+    }
+    #topbuttons>div>select{
+        height: 35px;
+        padding: 0px 20px 0px 10px;
+        border: 1px solid gray;
+        width: 250px;
+        margin: 5px 25px;
+        
+    }
+    #f500{
+        font-weight: 500;
+    }
+    #cardsection{
+        border: .5px solid rgb(220, 220, 220);
+    }
+    #pagechanger{
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 200px;
+        border-top: 1px solid rgb(211, 211, 211);
+    }
+    #pagechanger>p{
+        color: gray;
+    }
+    #pagechanger>#no>button{
+        margin-left: 10px;
+        height: 30px;
+        border: none;
+        background-color: white;
+    }
+    #pagechanger>#no>#n1{
+        background-color: black;
+        color: white;
+        border-radius: 2px;
+    }
+    #pagechanger>#no>button:hover{
+        border: 1px solid gray;  
+        border-radius: 2px;
+    }
+    #pagechanger>#next>button{
+        height: 35px;
+        padding: 0px 20px;
+        border-radius: 5px;
+        border: 1px solid rgb(208, 208, 208);
+        background-color: white;
+        font-weight: 500;
+    }
+    #pagechanger>#next>button:hover{
+        
+        border: 1px solid rgb(65, 65, 65);
+        
+    }
+
+
+
     </style>
 </head>
 <body>
@@ -331,7 +498,7 @@
                 <div id="category">  
                     <ul>
                         <li><a href="mensPage.html">MEN</a></li>
-                        <li>WOMEN</li>
+                        <li><a href="womensPage.html">WOMEN</a></li>
                         <li>KIDS</li>
                         <li>HOME & LIVING</li>
                         <li>BEAUTY</li>
@@ -367,10 +534,130 @@
     </div>
 
     <div id="content">
-        <div id="filterCheck">
+        <div id="fcheck">
+           <div id="filterCheck">
+            <div id="top">
+                <p >FILTERS</p>
+                <p ><span>CLEAR ALL</span> </p>
+            </div>
+            <div id="radio">             
+                <h5><input type="radio">Men</h5>
+                <h5><input type="radio">Women</h5>
+                <h5><input type="radio">Boys</h5>
+                <h5><input type="radio">Girls</h5>
+            </div>
+            <div id="categories">
+                <div id="cat">
+                    <p >FILTERS</p>
+                    <img src="https://iili.io/HoDlIZF.jpg" alt="">
+                </div>
+                <p><input type="checkbox" >Tshirts <span>(83207)</span></p>
+                <p><input type="checkbox" >Shirts <span>(73257)</span></p>
+                <p><input type="checkbox" >Jeans <span>(20758)</span></p>
+                <p><input type="checkbox" >Bedsheets <span>(20662)</span></p>
+                <p><input type="checkbox" >Kurta Sets <span>(19195)</span></p>
+                <p><input type="checkbox" >Sweatshirts <span>(18890)</span></p>
+                <p><input type="checkbox" >Trousers <span>(18290)</span></p>
+                <p><input type="checkbox" >Casual Shoes <span>(15499)</span></p>
+                <p id="l">+334 more</p>
+            </div>
+            <div id="categories">
+                <div id="cat">
+                    <p >BRAND</p>
+                    <img src="https://iili.io/HoDlIZF.jpg" alt="">
+                </div>
+                <p><input type="checkbox" >Roadster  <span>(4910)</span></p>
+                <p><input type="checkbox" >Allen Solly  <span>(4151)</span></p>
+                <p><input type="checkbox" > SOJANYA<span>(3470)</span></p>
+                <p><input type="checkbox" >Louis Philippe  <span>(2771)</span></p>
+                <p><input type="checkbox" >U.S. Polo Assn.  <span>(2698)</span></p>
+                <p><input type="checkbox" >Flying Machine  <span>(2380)</span></p>
+                <p><input type="checkbox" >Arrow  <span>(2356)</span></p>
+                <p><input type="checkbox" >DEYANN  <span>(2326)</span></p>
+                <p id="l">+819 more</p>
+            </div>
+            <div id="categories">
+                <div id="cat">
+                    <p >COLOR</p>
+                    <img src="https://iili.io/HoDlIZF.jpg" alt="">
+                </div>
+                <p><input type="checkbox" ><img id="blue" style="background-color: #0074d9;"> Blue  <span>(28910)</span></p>
+                <p><input type="checkbox" ><img id="blue" style="background-color: white;
+                    border: .5px solid gray;"> White<span>(17470)</span></p>
+                <p><input type="checkbox" ><img id="blue" style="background-color: black;">Black  <span>(16771)</span></p>
+                <p><input type="checkbox" ><img id="blue" style="background-color: #002f59;">Navy Blue  <span>(12698)</span></p>
+                <p><input type="checkbox" ><img id="blue" style="background-color: #5eb160;">Green  <span>(9380)</span></p>
+                <p><input type="checkbox" ><img id="blue" style="background-color: gray;">Grey  <span>(8356)</span></p>
+                <p><input type="checkbox" ><img id="blue" style="background-color: #d34b56;">Red <span>(8326)</span></p>
+                <p id="l">+38 more</p>
+            </div>
+            <div id="categories">
+                <div id="cat">
+                    <p >DISCOUNT RANGE</p>
+                    <img src="https://iili.io/HoDlIZF.jpg" alt="">
+                </div>
+                <p><input type="radio" >10% and above</p>
+                <p><input type="radio" >20% and above</p>
+                <p><input type="radio" >30% and above</p>
+                <p><input type="radio" >40% and above</p>
+                <p><input type="radio" >50% and above</p>
+                <p><input type="radio" >60% and above</p>
+                <p><input type="radio" >70% and above</p>
+                <p><input type="radio" >80% and above</p>
+                <p><input type="radio" >90% and above</p>
+            </div>
+        </div> 
+        </div>
+        <div id="rightcontent">
+
+            <div id="topbuttons">
+                <div>
+                    <button>Bundles <img src="https://iili.io/HoDyJnf.jpg"></button>
+                    <button>Country of Origin <img src="https://iili.io/HoDyJnf.jpg"></button>
+                    <button>Size <img src="https://iili.io/HoDyJnf.jpg"></button>
+                </div>
+                <div>
+                    <select>
+                        <option value="">Sort by : <span id="f500">Recommended</span> </option>
+                        <option value="">Recommended</option>
+                        <option value="">What's New</option>
+                        <option value="">Popularity</option>
+                        <option value="">Better Discount</option>
+                        <option value="">Price: High to Low</option>
+                        <option value="">Price: Low to High</option>
+                        <option value="">Customer Rating</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="cardsection">
+
+            </div>
+            <div id="pagechanger">
+                <p>Page 1 of 13385</p>
+                <div id="no">
+                    <button id="n1">1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>4</button>
+                    <button>5</button>
+                    <button>6</button>
+                    <button>7</button>
+                    <button>8</button>
+                    <button>9</button>
+                </div>
+                <div id="next">
+                    <button>NEXT &#x276D</button>
+                </div>
+                
+            </div>
 
         </div>
+        
+        
     </div>
+
+
 
 
     <div id="footerbg">
@@ -461,19 +748,24 @@
 </body>
 <script>
     window.onscroll = function(){myFunction()}
-var navbar = document.getElementById("nav_shadow")
-var sticky = nav_shadow.offsetTop;
-function myFunction(){
-    if(window.pageYOffset >= sticky){
-        nav_shadow.classList.add("sticky")
+    var navbar = document.getElementById("nav_shadow")
+    var sticky = nav_shadow.offsetTop;
+    function myFunction(){
+        if(window.pageYOffset >= sticky){
+            nav_shadow.classList.add("sticky")
+        }
+        else{
+            nav_shadow.classList.remove("sticky")
+        }
     }
-    else{
-        nav_shadow.classList.remove("sticky")
-    }
-}
 
-document.getElementById("mens").addEventListener("click",()=>{
-    window.open("\mens_page\mens.html")
-})
+    document.getElementById("mens").addEventListener("click",()=>{
+        window.open("\mens_page\mens.html")
+    })
+
+    fetch("productsData.json")
+    .then((res)=>{res.json()})
+    .then((json)=>{console.log(json)})
+
 </script>
 </html>
