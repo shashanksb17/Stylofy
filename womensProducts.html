@@ -524,13 +524,14 @@
         border: none;
         background-color: transparent;
         font-weight: 500;
+        align-items: end;
     }
     #container>#card>button:hover{  
         width: 100%;
         background-color: rgb(223, 223, 223);
         border: gray;
         font-weight: 500;
-        color: #0074d9;
+        color: #ff4772;
     }
 
 
@@ -569,7 +570,7 @@
                     <a href="login_signup.html">
                         <img src="https://iili.io/HoYkYV1.jpg" alt="">
                         <p>Profile</p> 
-                    </a>
+                    </a> 
                 </div>
                 <div id="wishlist">
                     <img src="https://iili.io/HoYS1Uu.jpg" alt="">
@@ -672,12 +673,12 @@
                     <button>Size <img src="https://iili.io/HoDyJnf.jpg"></button>
                 </div>
                 <div>
-                    <select>
-                        <option value="">Sort by : <span id="f500">Recommended</span> </option>
-                        <option value="">What's New</option>
-                        <option value="">Price: High to Low</option>
-                        <option value="">Price: Low to High</option>
-                        <option value="">Customer Rating</option>
+                    <select id="filter">
+                        <option value="" >Sort by : <span id="f500">Recommended</span> </option>
+                        <option value="What's New" id="sort">What's New</option>
+                        <option value="Price: High to Low" id="sort">Price: High to Low</option>
+                        <option value="Price: Low to High" id="sort">Price: Low to High</option>
+                        
                     </select>
                 </div>
             </div>
@@ -786,10 +787,10 @@
         <hr>
         <div id="footer2">         
             <h5 id="title">POPULAR SEARCHES</h5>
-            <p>Sherwani I Track Pants I Blazers I Sweaters For Men I Men Wedding Dresses I Kurta Pajama I Raincoats I Shorts I Trousers I Waistcoat I Inner Wear I Nightwear I Jeans I
-                Shirts I Jogger Jeans I Men Suits IT Shirts I Sweatshirts I Jackets For Men I Tracksuits I Ripped Jeans I Ethnic Wear I Hoodies I Raksha Bandhan Gifts I Watches I Shoes I
-                Belts I Swimwear I Dhotis I Boxers I Vests I Thermals I Socks I Shrugs I Bracelets I Rings I Sunglasses I Headphones I Wallets I Helmets I Caps I Mufflers I Gloves I Ties
-                I Cufflinks I Men Sandals I Floaters I Flip Flops I Trunks I Bags
+            <p>Punjabi Suits I Anarkali I Lingeire I Rakhi 2020 | Wedges I Jacket For Women I Bra I Leggings I Kanjeevaram Saree I Dupattas I Anklet I Jeggings I Panties I Image I W I
+                Samsung I Real Madrid I Saree I Dresses I Palazzo Pants I Shrugs I Lehangas I Kurtas I Earrings I Bikini I Women Sweaters I Swimwear I Nightwear I Nail Polish I Halter
+                Bra I Dungarees I Georgette Saree I Watches I Makeup I Necklace I Sharara I Hot Pant I Cotton Salwar Suit I Rompers I Nightdresses I Skirts I Stockings I Women Shirts I
+                Eyeliner I Lipstick I Bangles I Designer Blouses I Tops I One Piece Dresses I Gowns
             </p>
             <div>
                 <p>In case of any concern, <span>Contact Us</span></p>
@@ -1172,14 +1173,36 @@
         },
         
     ]
+        
+     
     
+    function sortby(){
+        let s=document.querySelector("#filter").value
+        if(s=="Price: Low to High"){
+            let newData=productsObject.sort((a,b)=>{return a.price-b.price});
+            displayItem(newData)
+        }
+        else if(s=="Price: High to Low"){
+            let newData=productsObject.sort((a,b)=>{return b.price-a.price});
+            displayItem(newData)
+        }
+        else if(s=="What's New"){
+            let newData=productsObject.reverse()
+            displayItem(newData)
+        }
+        else{
+            displayItem(productsObject)
+        }
+    }
+
+
     displayItem(productsObject)
     function displayItem(data){
         container.innerHTML=""
 
             data.forEach((ele)=>{
                 
-                if(ele.gender=="Male"){
+                if(ele.gender=="Female"){
                     let card = document.createElement("div")
                     card.setAttribute("id","card")
 
