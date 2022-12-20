@@ -681,12 +681,11 @@
                     <button>Size <img src="https://iili.io/HoDyJnf.jpg"></button>
                 </div>
                 <div>
-                    <select id="filter">
+                    <select onchange="sortby()" id="sort">
                         <option value="" >Sort by : <span id="f500">Recommended</span> </option>
-                        <option value="What's New" id="sort">What's New</option>
-                        <option value="Price: High to Low" id="sort">Price: High to Low</option>
-                        <option value="Price: Low to High" id="sort">Price: Low to High</option>
-                        
+                        <option value="What's New" >What's New</option>
+                        <option value="Price: High to Low" >Price: High to Low</option>
+                        <option value="Price: Low to High" >Price: Low to High</option>  
                     </select>
                 </div>
             </div>
@@ -820,7 +819,7 @@
             nav_shadow.classList.remove("sticky")
         }
     }
-    let cart_Items=JSON.parse(localStorage.getItem("carddata")) || []
+    let cart_Items=JSON.parse(localStorage.getItem("cartdata")) || []
     let container = document.getElementById("container")
     
     
@@ -1185,7 +1184,7 @@
      
     
     function sortby(){
-        let s=document.querySelector("#filter").value
+        let s=document.querySelector("#sort").value
         if(s=="Price: Low to High"){
             let newData=productsObject.sort((a,b)=>{return a.price-b.price});
             displayItem(newData)

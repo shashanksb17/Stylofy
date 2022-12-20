@@ -680,12 +680,11 @@
                     <button>Size <img src="https://iili.io/HoDyJnf.jpg"></button>
                 </div>
                 <div>
-                    <select>
+                    <select onchange="sortby()" id="sort">
                         <option value="">Sort by : <span id="f500">Recommended</span> </option>
-                        <option value="">What's New</option>
-                        <option value="">Price: High to Low</option>
-                        <option value="">Price: Low to High</option>
-                        <option value="">Customer Rating</option>
+                        <option value="What's New">What's New</option>
+                        <option value="Price: High to Low">Price: High to Low</option>
+                        <option value="Price: Low to High">Price: Low to High</option>
                     </select>
                 </div>
             </div>
@@ -808,6 +807,10 @@
     
 </body>
 <script>
+
+
+
+
     window.onscroll = function(){myFunction()}
     var navbar = document.getElementById("nav_shadow")
     var sticky = nav_shadow.offsetTop;
@@ -819,8 +822,10 @@
             nav_shadow.classList.remove("sticky")
         }
     }
-    let cart_Items=JSON.parse(localStorage.getItem("carddata")) || []
+    let cart_Items=JSON.parse(localStorage.getItem("cartdata")) || []
     let container = document.getElementById("container")
+
+
     
     
     let  productsObject =
@@ -1181,6 +1186,26 @@
         
     ]
     
+
+    function sortby(){
+        let s=document.querySelector("#sort").value
+        if(s=="Price: Low to High"){
+            let newData=productsObject.sort((a,b)=>{return a.price-b.price});
+            displayItem(newData)
+        }
+        else if(s=="Price: High to Low"){
+            let newData=productsObject.sort((a,b)=>{return b.price-a.price});
+            displayItem(newData)
+        }
+        else if(s=="What's New"){
+            let newData=productsObject.reverse()
+            displayItem(newData)
+        }
+        else{
+            displayItem(productsObject)
+        }
+    }
+
     displayItem(productsObject)
     function displayItem(data){
         container.innerHTML=""
@@ -1225,6 +1250,9 @@
             })
     }
     displayItem(productsObject)
+
+
+    
 
 </script>
 </html>
