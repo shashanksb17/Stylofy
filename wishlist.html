@@ -495,6 +495,8 @@
         row-gap: 20px;
         column-gap: 10px;
         padding: 20px;
+        margin: auto;
+        margin-top: 0px;
     }
     #card{
         width: 220px;
@@ -537,7 +539,19 @@
         font-weight: 500;
         color: #0074d9;
     }
+    #it{
+        margin-left: 50px;
+        margin-top: 100px;
+        font-size: 20px;
+    }
+    #it2{
+        margin-left: 50px;
+        margin-top: 30px;
+        font-size: 20px;
+    }
 
+
+    
 
 
 
@@ -592,10 +606,14 @@
         </nav>
     </div>
 
-    <div id="unav">
-        <h5>MY WISHLIST ITEMS <span>0</span> ITEMS</h5>
-        
+    <div id="it">
+        <h5>MY WISHLIST ITEMS <span id="unav">0</span> ITEMS</h5>
     </div>
+    <div id="it2">
+        <h5>MY TOTAL PRICE Rs. <span id="unav1">0</span></h5>
+    </div>
+    
+    
 
     <div id="content">
 
@@ -611,6 +629,9 @@
     
 </body>
 <script>
+    
+    
+
     window.onscroll = function(){myFunction()}
     var navbar = document.getElementById("nav_shadow")
     var sticky = nav_shadow.offsetTop;
@@ -622,18 +643,21 @@
             nav_shadow.classList.remove("sticky")
         }
     }
-    let cart_Items=JSON.parse(localStorage.getItem("carddata")) || []
+    let cart_Items=JSON.parse(localStorage.getItem("cartdata")) || []
     let container = document.getElementById("container")
     
-    console.log(cart_Items)
+    let tp=0
     displayItem(cart_Items)
-
+    document.getElementById("unav").innerHTML=cart_Items.length
+    document.getElementById("unav1").innerHTML=tp
+    
     function displayItem(data){
         container.innerHTML=""
 
             data.forEach((ele)=>{
                 
-                if(ele.gender=="Male"){
+                
+                if(ele.gender=="Female" ){
                     let card = document.createElement("div")
                     card.setAttribute("id","card")
 
@@ -652,15 +676,45 @@
                     let price = document.createElement("h5")
                     price.textContent="Rs. "+ele.price
                     price.setAttribute("id","price")
+                    tp+=Number(ele.price)
+
                     
 
+                    card.append(image,brand,name,price)
+                    
+                    document.querySelector("#container").append(card)
+                }
+                if(ele.gender=="Male" ){
+                    let card = document.createElement("div")
+                    card.setAttribute("id","card")
 
-                    card.append(image,brand,name,price,button)
+                    let image = document.createElement("img")
+                    image.setAttribute("src",ele.image)
+                    
+
+                    let brand = document.createElement("p")
+                    brand.textContent =ele.brand
+                    brand.setAttribute("id","brandFont")
+
+                    let name = document.createElement("p")
+                    name.textContent=ele.name
+                    name.setAttribute("id","nameFont")
+
+                    let price = document.createElement("h5")
+                    price.textContent="Rs. "+(ele.price)
+                    price.setAttribute("id","price")
+                    tp+=Number(ele.price)
+                    
+
+                    
+
+                    card.append(image,brand,name,price)
                     
                     document.querySelector("#container").append(card)
                 }
             })
     }
+    
     
 
 </script>
