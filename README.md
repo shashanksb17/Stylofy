@@ -1,9 +1,8 @@
 ## incandescent-quiet-2575
-## MYNTRA CLONE
-Myntra Website
+## PETSY COLNE
 💡 Objective of the website
 -
-Myntra is an Indian e-commerce company specializing in fashion and lifestyle products. Its objective is to provide a convenient and seamless shopping experience to customers, offering a wide range of products from clothing, footwear, accessories to personal care, home decor and more. It aims to become the go-to destination for fashion and lifestyle products, providing customers with a variety of options, fast and reliable delivery, and a user-friendly website.
+The objective of the Petsy website is likely to provide a platform for buying and selling pet-related products and services. Petsy is a pet-focused e-commerce site that aims to connect pet owners with products and services for their pets, making it easier and more convenient for them to find what they need for their furry friends.
 --
 ⚠️ TechStack/framework used
 -
