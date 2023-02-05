@@ -1,15 +1,25 @@
-# incandescent-quiet-2575
-# MYNTRA CLONE
-Myntra HackerRamp\n
-💡 Problem Statement
-An effective way to implement social distancing for On-Site Service employees working at places like warehouses, malls etc
-where the employees cannot be shifted to work from home.
+## incandescent-quiet-2575
+## MYNTRA CLONE
+Myntra Website
+💡 Objective of the website
+-
+Myntra is an Indian e-commerce company specializing in fashion and lifestyle products. Its objective is to provide a convenient and seamless shopping experience to customers, offering a wide range of products from clothing, footwear, accessories to personal care, home decor and more. It aims to become the go-to destination for fashion and lifestyle products, providing customers with a variety of options, fast and reliable delivery, and a user-friendly website.
+--
 ⚠️ TechStack/framework used
-Vanilla javascript
+-
+Vanilla javascript 
+-
 Html
+-
 Css
+-
 Chakra UI
+-
 Node
+--
 STEPS IN OUR PROJECT
-🔑 Prerequisites
-All the dependencies and required libraries are included in the file requirements.txt See here
+--
+🔑 Repository
+--
+All the files required libraries are included in the repository See here
+-
