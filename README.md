@@ -1,8 +1,8 @@
 ## incandescent-quiet-2575
-## PETSY COLNE
+## MYNTRA COLNE
 💡 Objective of the website
 -
-The objective of the Petsy website is likely to provide a platform for buying and selling pet-related products and services. Petsy is a pet-focused e-commerce site that aims to connect pet owners with products and services for their pets, making it easier and more convenient for them to find what they need for their furry friends.
+Myntra is a one stop shop for all your fashion and lifestyle needs. Being India's largest e-commerce store for fashion and lifestyle products, Myntra aims at providing a hassle free and enjoyable shopping experience to shoppers across the country with the widest range of brands and products on its portal.
 --
 ⚠️ TechStack/framework used
 -
@@ -11,10 +11,6 @@ Vanilla javascript
 Html
 -
 Css
--
-Chakra UI
--
-Node
 --
 STEPS IN OUR PROJECT
 --
