@@ -1,0 +1,123 @@
+* {
+	font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+#row{
+    display: flex;
+    flex-direction: row;
+}
+
+body{
+    background-color: rgb(249, 223, 223);
+}
+
+#submit:hover{
+    background-color:rgb(95, 227, 95);
+}
+.detail{
+    display: flex;
+    padding:10px;
+    text-align: center;
+    width: 200px;
+}
+form {
+	display: flex;
+	flex-direction: column;
+    background-color: #ffffff
+
+}
+#nav{
+    background-color:  #ffffff;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+span {
+	font-weight: bold;
+	margin-bottom: 8px;
+}
+
+input {
+	padding: 8px;
+	margin-bottom: 16px;
+	border: none;
+	border-radius: 4px;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    
+}
+.container {
+    padding-top: 100px;
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 40px;
+	background-color:#ffffff;
+	border-radius: 8px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    box-decoration-break: slice;
+}
+
+#img{
+    width: 80px;
+    padding-bottom: 20px;
+    background-color:#ffffff;
+}
+h3 {
+	
+    text-align: center;
+}
+#paymentpage{
+    padding: 8px 16px;
+	background-color:rgb(154, 203, 79);
+	border: none;
+    color: #fff;
+    width: 50%;
+    height: 40px;
+	border-radius: 5px;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+	cursor:auto;
+	transition: background-color 0.2s ease-in-out;
+    margin-left: 25%;
+    margin-top:30px;
+}
+#paymentpage:hover{
+   background-color: rgb(0, 195, 75);
+   
+}
+#securelogo{
+    display: flex;
+    width: 190px;
+    height: 35px;
+    margin-left: 87%;
+    margin-top: -80px;
+    padding-bottom: 5px;
+   
+}
+.securetext{
+    float: right;
+    letter-spacing: 1px;
+    color:#535766;
+    padding: 10px;
+  margin: 0 20px 0 0;
+ font-size: 10px;
+ font-weight: 600;
+ 
+}
+#cashpay{
+    font-size: small;
+    text-align: center;
+    padding: 5px;
+	background-color:#ff3fb2;
+	border: none;
+    color: #fff;
+    height: 40px;
+    width: 25%;
+    margin: auto;
+	border-radius: 5px;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+	cursor:auto;
+	transition: background-color 0.2s ease-in-out;
+}
+#cashpay:hover{
+    background-color: green;
+}

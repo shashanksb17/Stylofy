@@ -1,0 +1,146 @@
+        
+     
+body{
+   background-color:#f9dfdf;
+
+}
+#conatiner{
+    margin-top: 100px;
+}
+
+     #form{
+        
+         width:30%;
+         height:300px;
+         background-color:white;
+         padding-bottom: 5%;
+       
+}
+     
+     #log{
+        
+         display: flex;
+         justify-content: center;
+       
+     }
+
+     #img_div{
+         width:30%;
+     }
+
+     #o_div{
+        margin-top: 100px;
+        display:flex;
+         justify-content: center;
+      
+
+     }
+     button a{
+        color: #ffffff;
+        font-size: 20px;
+     }
+     #img{
+         width:100%;
+     }
+     #form>h2,p{
+         padding-left:7%;
+     }
+
+    #btn{
+         margin-left: 7%;
+        cursor: pointer;
+        
+     }
+
+     #num{
+         width:80%;
+         height:12%;
+         padding-left: 5%;
+         margin-left: 7%;
+     }
+     #btn{
+         width:85%;
+         height:13%;
+         background-color:#ff3f6c;
+     }
+     a{
+         color: rgb(249, 14, 132);
+         text-decoration: none;
+         cursor: pointer;
+     } 
+
+     body{
+    font-family: Assistant,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+   /* #parent{
+    display: flex;
+    width: 100%;
+    height: 80px;
+    padding-left: 30px;
+    background-color: #FFFFFF;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    
+   }
+   #logo {
+    margin-top: 22px;
+    width: 6.5%;
+   }
+   #logo img {
+   width: 100%;
+   margin-left: 25px;
+   margin-bottom: -8px;
+   margin-top: -10px;
+  
+   }
+   #mid{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 85px;
+    margin-top: 4px;
+   
+   }
+   #mid button{
+    margin-right: 13px;
+    border: none;
+   font-weight: 600;
+    background-color:white;
+    cursor: pointer;
+   }
+
+   #wish{
+    display: flex;
+    width: 15%;
+    margin-left: 10px;
+    margin-top: -4px;
+  }
+   #wish button {
+    width: 40%;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+   }
+  
+ 
+   #search {
+   width: 31.5%;
+   margin-left: 20px;
+   height: 80px;
+   margin-top: 8px;
+   }
+   #search input {
+    width: 95%;
+    border: none;
+    margin-top: 13px;
+    padding: 10px;
+    background-color: #F5F5F6;
+   }
+
+   #tc{
+    font-size: 12px;
+   } */
+
+
+     
+     
+

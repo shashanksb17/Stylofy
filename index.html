@@ -1,937 +1,1493 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="3.png" type="image/gif" sizes="16x16">
-    <title>Online Shopping for Women, Men, Kids Fashion & Lifestyle
-        My Look</title>
-    <link rel="stylesheet" href="index.css">
-    <style>
 
-    /* ----------------------nav bar start------------------------------------ */
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400&display=swap'); 
-    *{
-        margin: 0px;  
-    }
-    #nav_shadow{
-        /* border: 1px solid; */
-        overflow: hidden;
-        height: 80px;
-        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    }
-    #nav_shadow{
-        background-color: white;
-    }
-    .sticky{
-        position: fixed;
-        top: 0;
-        width: 100%;
-    }
-    .sticky + .content{
-        padding-top: 80px;
-    }
-    #nav{
-        height: 100%;
-        width: 93%;
-        margin: auto;
-        /* border: 1px solid red; */
-        display: flex;
-        justify-content: space-between;
-    }
-    #nav-left{
-        display: flex;
-    }
-    #logo>a>img{
-        width: 100%;
-        height: 95%;
-        display: flex;
-        padding: 1px;
-        align-items: center;
-    }
-    #category{
-        display: flex;
-        margin-left: 0px;
-    }
-    #category>ul{
-        display: flex;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        font-weight: 500;
-        align-items: center;    
-    }
-    #category>ul>li{
-        list-style: none ;
-        text-decoration: none;
-        color: black;
-        padding-left: 30px;
-        font-size: 14px;
-    }
-    #category>ul>li>a{
-        text-decoration: none;
-        color: black;
-    }
-    #category>ul>li>sup{
-        color: #ff4772;
-        font-size: 10px;
-    }
-    #nav-right{
-        display: flex;
-        align-items: center;
-        margin-right: 20px;
-    }
-    #nav-right>div{
-        padding: 0px 15px 0px 15px;
-    }
-    #search>input{
-        width: 450px;
-        background-color: #f5f5f6;
-        border: none;
-        
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px;
-        height: 20px;
-        padding: 10px;
-    }
-    #profile,#wishlist,#bag{
-        font-size: 12px;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        font-weight: 700;
-        
-    }
-    #search{
-        display: flex;
-        align-items: center;
-    }
-    #search>div{
-        width: 40px;
-        /* border: 1px solid; */
-        height: 40px;
-        background-color: #f5f5f6;
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px;
-    }
-    #search>div>img{
-        width: 15px;
-        margin: 12px;  
-    }
-    #search>input[type=text]:focus {
-        background-color: white;
-        border: none;
-        outline: .1px solid rgb(202, 202, 202);
-    }
-    #profile>a>p{
-        width: 30px;
-        text-align: center;
-        text-decoration: none;
-        color: black;
-    }
-    #profile>a>img{
-        width: 30px;
-        margin-left: 4px;
-        text-align: center;
-        text-decoration: none;
-    }
-    #wishlist>a>p{
-        width: 30px;
-        text-align: center;
-        color: black;
-    }
-    #wishlist>a>img{
-        width: 30px;
-        margin-left: 6px;
-        text-align: center;
-        text-decoration: none;
-    }
-    #bag>a>p{
-        width: 30px;
-        text-align: center;
-        color: black;
-    }
-    #bag>a>img{
-        width: 30px;
-        margin-left: 0px;
-        text-align: center;
-        text-decoration: none;
-    }
-    /* ----------------------nav bar end------------------------------------ */
+  <title>Online Shopping for Women, Men, Kids Fashion & Lifestyle - Stylofy</title>
+  <link rel="icon" type="image/png" href="/files/Stylofy.png" sizes="64x64">
+  <script src="https://kit.fontawesome.com/09ea9ed7f5.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+  <link rel="stylesheet" href="/pages/css/index.css">
 
-    /* ----------------------footer start------------------------------------ */
-    #footerbg{
-        margin-top: 50px;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        background-color: #f5f5f6;
-        padding-bottom: 50px;
-        
-    }
-    #footerbg>hr{
-        width: 70%;
-        margin: auto;
-        margin-top: 20px;
-        height: 0.01px;
-        
-    }
-    #footer1{
-        width: 70%;
-        margin: auto;
-        padding-top: 20px;
-        display: grid;
-        grid-template-columns: repeat(4,200px);           
-    }
-    #footer1 p{
-        color: gray;
-        font-weight: 350;
-    }
-    #title{
-        padding: 30px 0px 20px 0px;
-        font-weight: 500;
-    }
-    #contact{
-        display: flex;
-    }
-    #contact>img{
-        width: 50%;
-    }
-    #contact1{
-        display: flex;
-        gap: 15px;
-        align-items: center;  
-    }
-    #contact1>img{
-        width: 8%;
-    }
-    #guarantee{
-        display: flex;
-        margin-bottom: 30px;
-    }
-    #guarantee>div>img{
-        width: 50px;
-        margin-right: 10px;
-    }
-    #guarantee>p>span{
-        font-weight: 500;
-        color: black;
-    }
-    #garaunty{
-        padding-top: 45px;
-        margin-left: 150px;
-        width: 300px;
-    }
-    #footer2{
-        width: 70%;
-        margin: auto;        
-    }
-    #footer2 p{
-        color: gray;
-        font-weight: 350;
-        margin-top: 15px;
-    }
-    #footer2>div{
-        margin-top: 50px;
-        display: flex;
-        justify-content: space-between;
-    }
-    #footer2>div>p>span{
-        color: #526cd0;
-        font-weight: 600;
-    }
-    #footer3{
-        width: 70%;
-        margin: auto;        
-    }
-    #footer3 p{
-        color: gray;
-        font-weight: 350;
-    }
-    #footer3>div{
-        display: flex;
-        justify-content: space-between;
-    }
-    #footer3>div>p>span{
-        color: #526cd0;
-        font-weight: 600;
-    }
-    #sub{
-        display: flex;
-        color: gray;
-        font-weight: 350;
-        width: 70%;
-        margin: auto;
-        margin-top: 20px;
-        padding-left: 30px;
-    }
-    #sub>#para{
-        margin-left: 5px;
-    }
-    #sub>p>span{
-        color: black;
-        font-weight: 500;
-    }
-    #top20{
-        margin-top: 20px;
-    }
-    #footer4{
-        width: 70%;
-        margin: auto;        
-    }
-    #footer4 p{
-        color: gray;
-        font-weight: 350;
-    }
-    #sub-dot{
-        margin-left: 15px;
-        display: flex;
-    }
-    #dot{
-        margin-left: 10px;
-        margin-top: 10px;
-    }
-    #sub2{
-        display: flex;
-        color: gray;
-        font-weight: 350;
-        width: 70%;
-        margin: auto;
-        margin-top: 20px;
-        padding-left: 30px;
-    }
-    #sub2>p{
-        margin-left: 20px;
-        margin-top: 18px;
-    }
-    #sub2>div>p{
-        margin-left: 5px;
-        margin-top: 20px;
-    }
-    #sub2>div>#para{
-        font-weight: 500;
-        color: black;
-        font-size: 15px;
-    }
-    /* ----------------------footer end------------------------------------ */
 
-    /* ----------------------content start------------------------------------ */
-    #banner{
-        width: 100%;
-    }
-    #banner{
-        
-        width: 100%;
-    }
-    #banner>img{
-        width: 100%;
-    }
-    #banner1{
-        width: 100%;
-    }
-    #banner1{
-        margin-top: 100px;
-        width: 100%;
-    }
-    #banner1>img{
-        width: 100%;
-    }
-    #cards{
-        display: grid;
-        width: 100%;
-        grid-template-columns: repeat(10,1fr);
-    }
-    #cards>img{
-        width: 100%;
-        transition: .1s;
-    }
-    #cards>img:hover{
-        transform: scale(1.1);
-        z-index: 2;
-        box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-    }
-    #cards1{
-        display: grid;
-        width: 100%;
-        grid-template-columns: repeat(9,1fr);
-    }
-    #cards1>img{
-        width: 100%;
-        transition: .1s;
-    }
-    #cards1>img:hover{
-        transform: scale(1.1);
-        z-index: 2;
-        box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-    }
 
-    #cards3{
-        
-        display: grid;
-        width: 100%;
-        grid-template-columns: repeat(6,1fr);
-        row-gap: 40px;
-        column-gap: 40px;
-        width: 90%;
-        margin: auto;
-    }
-    #cards3>img{
-        width: 100%;
-        transition: .1s;
-    }
-    #cards3>img:hover{
-        transform: scale(1.1);
-        z-index: 2;
-        box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-    }
 
-    /* ----------------------content end------------------------------------ */
-
-    </style>
-   
 </head>
 <body>
-    <div id="nav_shadow">
-        <nav id="nav">
-            <div id="nav-left">
-                <div id="logo">
-                    <a href="index.html">
-                        <img src="https://iili.io/Ho7NIdQ.png">
-                    </a>
-                </div>
-                <div id="category">  
-                    <ul>
-                        
-                        <li><a href="mensPage.html">MEN</a></li>
-                        <li><a href="womensPage.html">WOMEN</a></li>
-                        <li>KIDS</li>
-                        <li>HOME & LIVING</li>
-                        <li>BEAUTY</li>
-                        <li>STUDIO <sup>NEW</sup></li>
-                    </ul>
-                </div>   
+
+    <div class="nav_up">
+        <div id="navbar">   
+             <div class="parent-box-1">
+  
+             
+      <div class="logo_div">
+        <a href="index.html"> <img id="logo" src="/files/Stylofy.png" alt="Stylofy Logo"></a>
+      </div>
+  
+     <div class="menu_div">
+         
+          <div id="main_div">
+                <a id="button" href="">MENS</a>
+              <div id="akash1">
+                <div id="b">
+                   <div class="div" id="d1">
+                       <h5 class="h5"><a href="">Topwear</a></h5>
+                           <ul>
+                              <li><a href="/pages/html/tshirt.html">T-shirts</a></li>
+                              <li><a href="/pages/html/tshirt.html">Casual Shirts</a></li>
+                               <li><a href="#">Formal Shirts</a></li>
+                               <li><a href="#">Sweatshirts</a></li>
+                                <li><a href="#">Sweaters</a></li>
+                               <li><a href="#">Jackets</a></li>
+                               <li><a href="#">Blazers &amp; Coats</a></li>
+                               <li><a href="#">Suits</a></li>
+                              <li><a href="#">Rain Jackets</a></li>
+                         
+                           </ul>
+                           </div>
+                           <div id="d2">  
+                            <h5 class="h5"><a href="/">Indian &amp; Festive Wear</a></h5>
+                            <ul>
+                               <li><a href="#">Kurtas &amp; Kurta Sets</a></li>
+                               <li><a href="#">Sherwanis</a></li>
+                               <li><a href="#">Nehru Jackets</a></li>
+                               <li><a href="#">Dhotis</a></li>
+                           </ul>
+                        </div>
+                  
+                  <div id="d3">
+                     <h5 class="h5"><a href="/">Bottom Wear</a></h5>
+                     <ul>
+                      <li><a href="#">Jeans</a></li>
+                      <li><a href="#">Causal Trousers</a></li>
+                      <li><a href="#">Formal Trousers</a></li>
+                      <li><a href="#">Sports</a></li>
+                      <li><a href="#">Track Pants &amp; joggers</a></li>
+                     </ul>
+  
+                     </div> 
+                     <div id="d4">
+                     <h5 class="h5"><a href="/"></a>Innerwear &amp; Joggers</h5>
+                     <ul>
+                      <li><a href="#">Briefs &amp; Trunks</a></li>
+                      <li><a href="#">Boxers</a></li>
+                      <li><a href="#">Vests</a></li>
+                      <li><a href="#">Sleepwear &amp; Loungewear</a></li>
+                      <li><a href="#">Thermals</a></li>
+                     </ul>
+                     <h5 class="h5"><a href="/"></a>Plus Size</h5>
+  
+                   </div> 
+                 
+  
+                 <div id="d5">
+                 <h5 class="h5"><a href="/">Footwear</a></h5>
+                 <ul>
+                     <li><a href="#">Casual Shoes</a></li>
+                     <li><a href="#">Sports Shoes</a></li>
+                     <li><a href="#">Formal Shoes</a></li>
+                     <li><a href="#">Sneakers</a></li>
+                     <li><a href="#">Sandals &amp; Floaters</a></li>
+                     <li><a href="#">Flip Flops</a></li>
+                     <li><a href="#">Socks</a></li>
+                 </ul>
+  
+                 </div>
+                 <div id="d6">
+                 <h5 class="h5"><a href="#">Personal care &amp; Grooming</a></h5>
+                 <h5 class="h5"><a href="#">Sunglass &amp; Frames</a></h5>
+                 <h5 class="h5"><a href="#">Watches</a></h5>
+             </div>
+                 
+               </div>
             </div>
-            <div id="nav-right">
+          
+        </div>
+    
+  
+  
+  
+  
+         <div id="main_div">
+         <a id="button" href="#">WOMENS</a>
+         <div id="akash2">
+           <div id="b">
+              <div class="div" id="d1">
+                  <h5 class="h5"><a href="#">Indian &amp; Fusion wear</a></h5>
+                      <ul>
+                         <li><a href="/pages/html/kurtawomen.html">Kurtas &amp; Suits</a></li>
+                         <li><a href="/pages/html/kurtawomen.html">Kurtis,Tunics &amp; Tops</a></li>
+                          <li><a href="#">Ethnic Wear</a></li>
+                          <li><a href="#">Leggings, Salwars &amp; Churidars</a></li>
+                           <li><a href="#">Skirts &amp; Palazzos</a></li>
+                          <li><a href="#">Sarees</a></li>
+                          <li><a href="#">Dress Materials</a></li>
+                          <li><a href="#">Lehenga Cholis</a></li>
+                         <li><a href="#">Dupattas &amp; Shawls</a></li>
+                      </ul>
+                      </div>
+                      <div id="d2">
+                       <h5 class="h5"><a href="#">Western wear</a></h5>
+                       <ul>
+                          <li><a href="#">Dresses</a></li>
+                          <li><a href="#">Tops</a></li>
+                          <li><a href="#">Tshirts</a></li>
+                          <li><a href="#">Jeans</a></li>
+                          <li><a href="#">Trousers &amp; Capris</a></li>
+                          <li><a href="#">Shorts &amp; Skirts</a></li>
+                          <li><a href="#">Co-ords</a></li>
+                          <li><a href="#">Playsuits</a></li>
+                      </ul>
+                   </div>
+             <div id="d3">
+                <h5 class="h5"><a href="#">Sport &amp; Active wear</a></h5>
+                <ul>
+                 <li><a href="#">Clothing</a></li>
+                 <li><a href="#">Footwear</a></li>
+                 <li><a href="#">Sports Accessories</a></li>
+                 <li><a href="#">Sports Equipment</a></li>
+                </ul>
+                </div>
+                <div id="d4">
+                <h5 class="h5"><a href="#"></a>Beauty &amp; Personal care</h5>
+                <ul>
+                 <li><a href="#&quot;">Makeup</a></li>
+                 <li><a href="#">Skincare</a></li>
+                 <li><a href="#">Premium Beauty</a></li>
+                 <li><a href="#">Lipsticks</a></li>
+                 <li><a href="#">Fragrances</a></li>
+                </ul>
+                <h5 class="h5"><a href="#"></a>Plus Size</h5>
+              </div>
+            <div id="d5">
+            <h5 class="h5"><a href="#">Lingerie &amp; Sleepwear</a></h5>
+            <ul>
+                <li><a href="#">Bra</a></li>
+                <li><a href="#">Briefs</a></li>
+                <li><a href="#">Shapewear</a></li>
+                <li><a href="#">Sleepwear &amp; Loungewear</a></li>
+                <li><a href="#">Swimwear</a></li>
+                <li><a href="#">Camisoles &amp; Thermals</a></li>
+                <li><a href="#">Socks</a></li>
+            </ul>
+            </div>
+           
+          </div>
+       </div>
+     </div>
+  
+  
+  
+  
+  
+  
+     <div id="main_div">
+     <a id="button" href="#">KIDS</a>
+     <div id="akash3">
+       <div id="b">
+          <div class="div" id="d1">
+              <h5 class="h5"><a href="#">Boys Clothing</a></h5>
+                  <ul>
+                     <li><a href="#">T-Shirts</a></li>
+                     <li><a href="#">Shirts</a></li>
+                      <li><a href="#">Shorts</a></li>
+                      <li><a href="#">Jeans</a></li>
+                       <li><a href="#">Trousers</a></li>
+                      <li><a href="#">Clothing Sets</a></li>
+                      <li><a href="#">Ethnic Wear</a></li>
+                      <li><a href="#">Track Pants &amp; Pyjamas</a></li>
+                     <li><a href="#">Jacket, Sweater &amp; Sweatshirts</a></li>
+                     <li><a href="#">Party Wear</a></li>
+                     <li><a href="#">Innerwear &amp; Thermals</a></li>
+                    
+                  </ul>
+                  </div>
+                  <div id="d2">
+                   <h5 class="h5"><a href="#">Girls Clothing</a></h5>
+                   <ul>
+                      <li><a href="#">Dresses</a></li>
+                      <li><a href="#">Tops</a></li>
+                      <li><a href="#">Tshirts</a></li>
+                      <li><a href="#">Clothing Sets</a></li>
+                      <li><a href="#">Lehenga choli</a></li>
+                      <li><a href="#">Kurta Sets</a></li>
+                      <li><a href="#">Party wear</a></li>
+                      <li><a href="#">Dungarees &amp; Jumpsuits</a></li>
+                      <li><a href="#">Skirts &amp; shorts</a></li>
+                      <li><a href="#">Tights &amp; Leggings</a></li>
+                   
+                  </ul>
+               </div>
+         <div id="d3">
+            <h5 class="h5"><a href="/">Footwear</a></h5>
+            <ul>
+             <li><a href="#">Casual Shoes</a></li>
+             <li><a href="#">Flipflops</a></li>
+             <li><a href="/">Sports Shoes</a></li>
+             <li><a href="/">Flats</a></li>
+             <li><a href="/">Sandals</a></li>
+             <li><a href="/">Heels</a></li>
+             <li><a href="/">School Shoes</a></li>
+             <li><a href="/">Socks</a></li>
+            </ul>
+            </div>
+            <div id="d4">
+            <h5 class="h5"><a href="#"></a>Infants</h5>
+            <ul>
+             <li><a href="">Bodysuits</a></li>
+             <li><a href="">Rompers &amp; Sleepsuits</a></li>
+             <li><a href="#">Clothing Sets</a></li>
+             <li><a href="#">Tshirts &amp; Tops</a></li>
+             <li><a href="#">Dresses</a></li>
+             <li><a href="#">Bottom wear</a></li>
+             <li><a href="#">Winter Wear</a></li>
+             <li><a href="#">Innerwear &amp; Sleepwear</a></li>
+             <li><a href="#">Infant Care</a></li>
+            </ul>
+            <h5 class="h5"><a href="#"></a>Plus Size</h5>
+          </div>
+        <div id="d5">
+        <h5 class="h5"><a href="#">Kids Accessories</a></h5>
+        <ul>
+            <li><a href="#">Bags &amp; Backpacks</a></li>
+            <li><a href="#">Watches</a></li>
+            <li><a href="#">Jewellery &amp; Hair accessory</a></li>
+            <li><a href="#">Sunglasses</a></li>
+            <li><a href="#">Masks &amp; Protective Gears</a></li>
+            <li><a href="#">Caps &amp; Hats</a></li>
+           
+        </ul>
+        </div>
+     
+      </div>
+   </div>
+  </div>
+  
+  
+  
+  <div id="main_div">
+  <a id="button" href="#">HOME &amp; LIVING</a>
+  <div id="akash4">
+    <div id="b">
+       <div class="div" id="d1">
+           <h5 class="h5"><a href="#">Bed Linen &amp; Furnishing</a></h5>
+               <ul>
+                  <li><a href="#">Bed Runners</a></li>
+                  <li><a href="#">Mattress Protectors</a></li>
+                   <li><a href="#">Bedsheets</a></li>
+                   <li><a href="#">Bedding Sets</a></li>
+                    <li><a href="#">Blankets, Quilts &amp; Dohars</a></li>
+                   <li><a href="#">Pillows &amp; Pillow Covers</a></li>
+                   <li><a href="#">Bed Covers</a></li>
+                   <li><a href="#">Diwan Sets</a></li>
+                  <li><a href="#">Chair Pads &amp; Covers</a></li>
+                  <li><a href="#">Sofa Covers</a></li>
                 
-                <div id="search">
-                    <div><img src="https://iili.io/HoY2lbR.jpg" alt=""></div>
-                    <input type="text" placeholder="Search for products, brands and more">
-                </div>
-                <div id="profile">
-                    <a href="login_signup.html">
-                    <img src="https://iili.io/HoYkYV1.jpg" alt="">
-                    <p>Profile</p> 
-                    </a>
-                </div>
-                <div id="wishlist">
-                    <a href="wishlist.html">
-                        <img src="https://iili.io/HoYS1Uu.jpg" alt="">
-                         <p>Wishlist</p>
-                    </a> 
-                </div>
-                <div id="bag">
-                    <a href="bag.html">
-                    <img src="https://iili.io/HoYSyzl.jpg" alt="">
-                    <p>Bag</p> 
-                    </a>
-                </div>  
+               </ul>
+               </div>
+               <div id="d2">
+                <h5 class="h5"><a href="#">Bath</a></h5>
+                <ul>
+                   <li><a href="/">Bath Towels</a></li>
+                   <li><a href="#">Hand &amp; Face Towels</a></li>
+                   <li><a href="#">Beach Towels</a></li>
+                   <li><a href="#">Towels Set</a></li>
+                   <li><a href="#">Bath Rugs</a></li>
+                   <li><a href="#">Bath Robes</a></li>
+                   <li><a href="#">Bathroom Accessories</a></li>
+                   <li><a href="#">Shower Curtains</a></li>
+                
+               </ul>
             </div>
-        </nav>
-    </div>
-
-    <div id="banner1">
-        <img src="https://iili.io/Ho1OANf.jpg" alt="">
-    </div>
-    <div id="banner">
-        <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/12/14/b7d07d5b-edf1-4ab7-9da6-c7dd85be69a71670994372049-DK_Flat300-Off.gif" alt="">
-    </div>
-    <div id="banner">
-        <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/12/8/c31bd037-958b-40fa-bdaf-3f0fc1c71ce21670497018730-Crazy-deals-DK.jpg" alt="">
-    </div>
-    <div>
-        <div id="cards">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/22/ae1ec65c-4640-4177-8531-c9d76bc380911669141574035-Crocs_-_Footwear_Min_40_Off.png" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/22/9fa02568-c753-42b2-9ec1-5acadbb4882f1669141575394-Skechers_Sports_and_Casual_Shoes_Upto_40_Off.png" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/22/0a27d2d0-dfda-4650-b2cf-9e9a308992ef1669141573670-Adidas_Sports_and_Casual_Shoes_Min_50_OFF.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/12/3/48f92ec4-7fda-45cd-8d13-d5c89bbcfcc41670043265628-3.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/12/6/4fd26e46-e935-4e82-b351-048d259dc7ac1670305299746-unnamed---2022-12-06T111133.557.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/22/791b4834-d420-4613-9ee0-7179570a7c9c1669141575917-Wildcraft-_Skybags_and_more_Backpacks_and_Trolleys_Starting_499_1299.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/22/820d5366-d36b-40fb-a9af-a850931d1f9f1669141575135-Premium_Men_Suits_and_Blazer_by_Louis_Philippe-_Blackberrys_-_More.png" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/12/3/41501763-bbb4-43a8-95c7-8c72f4046a5c1670043300970-image_jpeg271683719.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/22/31ec9256-31a0-4f0d-b344-47ba062291d01669141574185-FM-JJ_Min_60_off.png" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/22/321c0bbd-5498-4725-a2ee-6513014759fc1669141574303-Highlander-_Locomotive_Min_60.png" alt="">
+      <div id="d3">
+         <h5 class="h5"><a href="#">Home Décor</a></h5>
+         <ul>
+          <li><a href="#">Plants &amp; Planters</a></li>
+          <li><a href="#">Aromas &amp; Candles</a></li>
+          <li><a href="#">Clocks</a></li>
+          <li><a href="#">Mirrors</a></li>
+          <li><a href="#">Wall Décor</a></li>
+          <li><a href="#">Festive Decor</a></li>
+          <li><a href="#">Pooja Essentials</a></li>
+          <li><a href="#">Wall Shelves</a></li>
+          <li><a href="#">Fountains</a></li>
+          <li><a href="#">Showpieces &amp; Vases</a></li>
+         </ul>
+         </div>
+         <div id="d4">
+         <h5 class="h5"><a href="#"></a>Kitchen &amp; Table</h5>
+         <ul>
+          <li><a href="#">Table Runners</a></li>
+          <li><a href="#">Dinnerware &amp; Serveware</a></li>
+          <li><a href="#">Cups and Mugs</a></li>
+          <li><a href="#">Bakeware &amp; Cookware</a></li>
+          <li><a href="#">Kitchen Storage &amp; Tools</a></li>
+          <li><a href="#">Bar &amp; Drinkware</a></li>
+          <li><a href="#">Table Covers &amp; Furnishings</a></li>
+         
+         </ul>
+         <h5 class="h5"><a href="#"></a>Curtains</h5>
+       </div>
+     <div id="d5">
+     <h5 class="h5"><a href="#">Lamps &amp; Lighting</a></h5>
+     <ul>
+         <li><a href="#">Floor Lamps</a></li>
+         <li><a href="#">Ceiling Lamps</a></li>
+         <li><a href="#">Table Lamps</a></li>
+         <li><a href="#">Wall Lamps</a></li>
+         <li><a href="#">Outdoor Lamps</a></li>
+         <li><a href="#">String Lights</a></li>
+        
+     </ul>
+     </div>
+     
+   </div>
+  </div>
+  </div>
+  
+  
+  
+  <div id="main_div">
+  <a id="button" href="#">BEAUTY</a>
+  <div id="akash5">
+    <div id="b">
+       <div class="div" id="d1">
+           <h5 class="h5"><a href="#">Makeup</a></h5>
+               <ul>
+                  <li><a href="#">Lipstick</a></li>
+                  <li><a href="#&quot;">Lip Gloss</a></li>
+                   <li><a href="#">Lip Liner</a></li>
+                   <li><a href="#">Mascara</a></li>
+                    <li><a href="#">Eyeliner</a></li>
+                   <li><a href="#">Kajal</a></li>
+                   <li><a href="#">Eyeshadow</a></li>
+                   <li><a href="#">Foundation</a></li>
+                  <li><a href="#">Primer</a></li>
+                  <li><a href="#">Concealer</a></li>
+                  <li><a href="#">Compact</a></li>
+                  <li><a href="#">Nail Polish</a></li>
+                
+               </ul>
+               </div>
+               <div id="d2">
+                <h5 class="h5"><a href="#">Skincare, Bath &amp; Body</a></h5>
+                <ul>
+                   <li><a href="#">Face Moisturiser</a></li>
+                   <li><a href="#">Cleanser</a></li>
+                   <li><a href="#">Masks &amp; Peel</a></li>
+                   <li><a href="#">Sunscreen</a></li>
+                   <li><a href="#">Serum</a></li>
+                   <li><a href="#">Face Wash</a></li>
+                   <li><a href="#">Eye Cream</a></li>
+                   <li><a href="#">Lip Balm</a></li>
+                   <li><a href="#">Body Lotion</a></li>
+                   <li><a href="#">Body Wash</a></li>
+                   <li><a href="#">Body Scrub</a></li>
+                   <li><a href="#">Hand Cream</a></li>
+                
+               </ul>
+            </div>
+      <div id="d3">
+         <h5 class="h5"><a href="#">Haircare</a></h5>
+         <ul>
+          <li><a href="#">Shampoo</a></li>
+          <li><a href="#">Conditioner</a></li>
+          <li><a href="#">Hair Cream</a></li>
+          <li><a href="#">Hair Oil</a></li>
+          <li><a href="#">Hair Gel</a></li>
+          <li><a href="#">Hair Color</a></li>
+          <li><a href="#">Hair Serum</a></li>
+          <li><a href="#">Hair Accessory</a></li>
+          
+         </ul>
+         </div>
+        
+     <div id="d5">
+     <h5 class="h5"><a href="#">Beauty Gift &amp; Makeup Set</a></h5>
+     <ul>
+         <li><a href="#">Beauty Gift</a></li>
+         <li><a href="#">Makeup Kit</a></li>
+         <li><a href="#">Trimmers</a></li>
+         <li><a href="#">Beard Oil</a></li>
+         <li><a href="#">Hair Wax</a></li>
+        
+     </ul>
+     </div>
+     <div id="d6">
+     <h5 class="h5"><a href="#">Top Brands</a></h5>
+     <ul>
+      <li><a href="#">Lakme</a></li>
+      <li><a href="#">Maybelline</a></li>
+      <li><a href="#">LOreal</a></li>
+      <li><a href="#">Philips</a></li>
+      <li><a href="#">Bath &amp; Body Works</a></li>
+      <li><a href="#">THE BODY SHOP</a></li>
+      <li><a href="#">Biotique</a></li>
+      <li><a href="#">Mamaearth</a></li>
+      <li><a href="#">MCaffeine</a></li>
+      <li><a href="#">Nivea</a></li> 
+  </ul>
+  <h5 class="h5"><a href="/">Home &amp; Bath</a></h5>
+  </div>
+   </div>
+  </div>
+  </div>
+        
+  
+  
+  <div id="main_div">      
+  <a id="button" href="#">STUDIO<sup>New</sup></a>
+     </div>
+  </div>
+  
+  
+  </div>
+  <!-- parent-box-1 end -->
+  
+  <div class="parent-box-2">
+  
+  <div class="div1">
+      <input type="text" name="" id="search" placeholder="Search for products, brands and more">
+      
+          <span><i class="fa-solid fa-magnifying-glass">&nbsp;</i></span> 
+          
+          <div id="two"></div>
+  
+  </div>
+  
+  <div id="other_div">
+      <div>
+   
+     
        
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/12/3/9d555b43-7662-4b9d-a86d-34cbb2b188141670042906583-image_jpeg995775942.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/12/6/1a98d360-1e2b-4aa0-9368-da26a41a79771670304869181-unnamed---2022-12-06T110418.512.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/12/3/ee49bb71-96d9-468f-be00-768690902f1a1670043004089-image_jpeg_1901560942.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/12/6/a8e9751a-2d2c-48c1-b063-88e89d44fff31670305199307-unnamed---2022-12-06T110953.451.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/12/6/23376248-6395-45c2-931a-40c646a556e71670305224837-unnamed---2022-12-06T111017.315.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/12/6/2a857f34-3577-4e55-a9d0-9a9e72adca4a1670305254154-unnamed---2022-12-06T111048.219.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/22/c2d69da3-7811-41c6-84ed-2e5757dfbaf01669141574559-Levis_at_Min_50.png" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/12/3/7d763eb2-54d3-4bbc-979d-ec09d5f9dfec1670043029434-image_jpeg_388765471.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/22/851a646a-0efc-4baf-81d2-45cd54f9bed61669141575846-Unique_Westernwear_brands_Street9-_Berrylush_-_More.png" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/22/e16dd73a-26a5-4a73-b67b-311b314460dc1669141573861-Best_of_International_brands_-_Mango_M-S.png" alt="">
-        </div>
-    </div>
-    <div id="banner">
-        <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/12/7/246a6b35-8899-43ba-9f97-2ea0ac5a88ba1670406285563-Super-Savings-Zone.jpg" alt="">
-    </div>
-    <div>
-        <div id="cards">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/22/78006e87-07ac-4227-919f-97ae6efd89721669126107846-Budget-Buys_Kurtas-_-Kurta-Sets.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/22/79714091-588c-4cb5-81a1-f703873e41f81669126108310-Budget-Buys_Trimmers-_-Epilators.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/22/4f6f54a0-13d0-46d1-89ab-f2fd38881d091669126108350-Budget-Buys_T-Shirts.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/22/19bf2972-f2b8-4cf5-8fc1-f34b3504c5bf1669126107582-Budget-Buys_Casual-Shirts.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/22/0d6914af-97f7-4e5d-b701-c02319d6a4971669126107792-Budget-Buys_Jeans-1.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/22/7bc252d1-21f5-470c-9cad-6b836e83cda21669126108134-Budget-Buys_Sport-Shoes.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/22/ef3d63e1-822e-439b-a3f8-60116ebb72351669126107591-Budget-Buys_Casual-Shoes.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/22/92590d99-c48b-417d-a883-f25a8e299a501669126108146-Budget-Buys_Suits-_-Blazers.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/22/3c32f151-b6cd-4d94-ac59-e36922b0c34e1669126107714-Budget-Buys_Formal-Shoes.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_89,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/22/21c605d4-10bd-4f8b-90ff-d4d0b9ffe9381669126108049-Budget-Buys_Shampoos-_-Conditioners.jpg" alt="">
+  
+  
+          <div id="main_div">
+          <a href=""><i class="fa-solid fa-user" id="i2"></i></a>
+          <h5 id="profile_tag"><a href="#">Profile</a></h5>
+          <div id="akash7">
+            <div id="b">
+               <div class="div" id="d1">
+                   <h5 id="lh5">Welcome</h5>
+                   <p id="lp">To access account and manage order</p>
+                   <button id="ls"><a id="logincss" href="pages/html/signup.html">LOGIN / SIGNUP</a></button>
+                   <br>
+                   <hr>
+                       <ul>
+                          <li><a href="pages/html/bag.html">Order</a></li>
+                          <li><a href="pages/html/wishlist.html">Wishlist</a></li>
+                           <li><a href="#">Gift card</a></li>
+                           <li><a href="#">Contact us</a></li>
+                            <li><a href="#">Stylofy Insider <button id="insider_span">New</button></a></li>
+                        
+                       </ul>
+                      
+                      <hr>
+  
+                    <ul>
+                           <li><a href="#">Stylofy credit</a></li>
+                             <li><a href="#">Coupons</a></li>
+                           <li><a href="#">Saved cards</a></li>
+                           <li><a href="#">Saved Address</a></li>
+                      
+  
+  
+                       </ul></div>
+                      
+              
+         
+             
+           </div>
+          </div>
+          </div>
+          </div>
+  
+      <div>
+          <a href="pages/html/wishlist.html"><i class="fa-solid fa-heart font" id="i1"><span id="count_wish">&nbsp;<span></span></span></i></a><br>
+        <a id="wishlist_tag" href="pages/html/wishlist.html">Wishlist</a>
+      </div>
+  
+      <div>
+        <a id="count" href="pages/html/bag.html">  <i class="fa-solid fa-bag-shopping font " id="i1"><span id="count_cart">&nbsp;</span></i></a>
+         <br>  <a id="cart_tag" href="pages/html/bag.html">Bag</a>
+      </div>
+  </div>
+  
+  </div> 
+  
+  </div>
+      </div>
+      <br><br><br><br>
+
+ <div class="slideshow-container">
+        <div class="slideshow">
+            <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2023/2/14/7cec9b95-a683-473c-aca8-cc510821b1cd1676394720493-Desktop-Banner.gif" alt="1">
+            <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/28/84b6a214-9eb3-49eb-9f9d-72cec56ec5d71659019908592-Indian-Wear_DK--1-.jpg" alt="2">
+            <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/28/6107d28b-2bcb-44e6-9743-655b54550b8f1659020199598-Workwear_Desk--1-.jpg" alt="3">
+            <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/28/0174e4d7-448c-4746-8572-69461ad5be101659020268081-Tops---Tees_Desk.jpg" alt="4">
+            <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/25/b656a7f4-4688-4997-bb7c-54b78793981e1658752386588-Western-Wear_Desk.jpg" alt="5">
+            <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/25/179e278f-77ee-44c2-bf39-9f00b0cd08e01658752429301-Handbags_Desk.jpg" alt="6">
+            <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/25/9be788ff-39a4-4214-99d0-fc97505aae5a1658752545685-USPA_Desk_Banner.jpg" alt="7">
+            <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/5/31/4031994d-9092-4aa7-aea1-f52f2ae5194f1654006594976-Activewear_DK.jpg" alt="8">
+            <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/6/27/53b4daed-cd2c-4111-86c5-14f737eceb351656325318973-Handbags_Desk.jpg" alt="9">
+        </div> 
+        <a class="prev"></a>
+        <a class="next"></a>
+</div>
+  
+<h4 class="h4text">DEAL OF THE DAY</h4>
+<div id="dealOfDay">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2023/2/19/44a9b614-4f67-4b5a-89e5-ee50f7d5f8681676819472882-HRX_Activewear_Min_65_off.png" 
+    alt="Hrx">
+
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2023/2/19/ea799980-8939-4dc3-8bbe-72b3f63ab8e31676819472832-Casual_Shoes_Min_40_Off.png" 
+    alt="US Polo ">
+
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2023/2/19/06d56cbf-0135-426a-a81a-b637c6f30dac1676819472817-Campus-_Highlander_Starting_499_1299.png" 
+    alt="Campus/Highlander">
+
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2023/2/19/216f9bdf-e348-4e9d-b108-f22ceafbf4911676819472966-Starting_1299_2499.png" 
+    alt="Puma/Adidas">
+
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2023/2/19/6ecb87f9-bd94-4c0a-a64b-4692197d6be21676819472939-Roadster-_Here_-_Now_-_more___Flat_70_off.png" 
+    alt="Roadester/Here&Now">
+
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2023/2/19/18e8fbf9-7702-4f58-95a4-7cdb69850e641676819472892-Mango_Man-_Levi-s-____Flat_50_off.png" 
+    alt="Mango/Levis">
+
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2023/2/19/d3ab2a84-91c5-4137-b3b3-807b540bcc531676819472859-H-M-_USPA___STarting_399.png" 
+    alt="h&m/US polo">
+
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2023/2/19/cd86754f-29cc-4a42-b8f1-bce7218493031676819472927-Puma-_Nike_-_more_-min_40_off.png" 
+    alt="Jockey/Puma">
+</div>
+
+<h4 class="h4text">BEST OF Stylofy EXCLUSIVE BRANDS</h4>
+<div id="exclusiveBrands">
+
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/retaillabs/2022/3/10/b25f89eb-fbeb-4013-829e-32ee5b5daaa01646895183668-Roadster-HRX_Unisex.jpg" 
+     alt="Roadester1">
+    
+     <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/bfa5c871-a5a5-4d81-b46e-18aedccfdc9b1644407437913-Kurta_sets-_Anouk-_AAY_-_more.jpg" 
+     alt="Kurta sets 2">
+
+     <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/046147d1-1874-4c10-adb9-6dbd88b606e71644407437923-Kurtas-_Anouk-_Sangria_-_more.jpg" 
+     alt="Kurtas 3">
+
+     <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/76acf345-fc62-4b49-8b2c-9c0fc9c925311644407437977-Tops_-_Dressberry-_AAY_-_more.jpg" 
+     alt="Tops 4">
+
+     <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/3923c0c1-2260-4f0e-9598-15b6f9d7731c1644407437960-Roadster_and_H-N_Shirts.jpg" 
+     alt="Casual Shirts 5">
+
+     <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/eb70855e-98c4-412d-bf20-50804546d57e1644407437883-Dresses_-_Dressberry-_Chemistry_-_more.jpg" 
+     alt="Dresses 6">
+
+     <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/eff5a33f-ea24-4e70-84e5-ec4d25ee5c7b1644407437968-Roadster_and_KnK_Tshirts.jpg" 
+     alt="Tshirt 7">
+
+     <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/667a71f0-c24b-4a00-a98c-cc6a54a815e91644407437985-Tshirts_-_Roadster-_KnK_-_more.jpg" 
+     alt="Tshirts 8">
+
+     <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/ffaa74a6-4824-4b19-8936-70ffaef92f001644407437937-M-H_and_HRX_Tshirts.jpg" 
+     alt="number 9">
+
+     <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/f9621136-0f00-44d5-aa06-b727a6c8f7c51644407437944-M-H_and_Wrogn_Shirts.jpg" 
+     alt="number 10">
+
+     <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/3f41465b-7109-4bb2-bf79-ab89ff2128be1644407437899-HRX_and_Harvard_Trackpants.jpg" 
+     alt="number 11">
+
+     <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/745cec57-af58-4ba6-8ae1-a3ccbe7c54e91644407437930-Lingerie_-_Loungewear_-_DB-_ETC.jpg" 
+     alt="number 12">
+
+     <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/e27ee3af-3f6b-4106-9b20-2b4463c80ba41644407437953-Roadster-_Wrogn_Jeans.jpg" 
+     alt="number 13">
+
+     <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/2b15a87a-1d92-4edf-99c2-ec390a38089e1644407437872-Activewear_-_HRX-_Slazenger.jpg" 
+     alt="number 14">
+
+     <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/931b0b8f-c14d-4ec7-b923-cf512de991731644407437891-HOP_and_Anouk_Kurtas_-_sets.jpg" 
+     alt="number 15">
+
+     <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/9/201d1bfd-287e-47b6-bef6-3c46eac444a51644407437906-Jeans_-_Roadster-_M-H_and_more.jpg" 
+     alt="number 16">
+</div>
+
+<h4 class="h4text">TOP PICKS</h4>
+<div id="topicks">
+
+    <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/062cea23-9a6a-44b9-bdd4-87cae6a462311645602543339-Kurta-sets.jpg" 
+    alt="num1">
+
+    <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/8d65d400-decd-4f42-902c-a40350a16ed11645602543346-Kurtas.jpg"
+    alt="num2">
+
+    <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/398ee53b-5899-4a9a-9d0b-b35d60c01cb41645602543325-Dresses.jpg"
+    alt="num3">
+
+    <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/2f410d81-7fae-400e-9ecc-b4a8b6df72b91645602543430-Women-Jeans.jpg"
+    alt="num4">
+
+    <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/82a9be01-3032-4725-9500-bcc94366b7931645602543399-Mens-Shirts.jpg"
+    alt="num5">
+
+    <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/c6b09c0f-5c57-472c-a3fc-854ec506a90e1645602543387-Men-T-shirt.jpg"
+    alt="num6">
+
+    <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/f08e2bac-9bed-4f87-b022-0dce8defeded1645602543380-Men-Trousers.jpg"
+    alt="num7">
+
+</div>
+
+<h4 class="h4text">CATEGORIES TO BAG</h4>
+<div id="categorytobag">
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/aa4658b5-d723-4652-9ea1-00456b355c3a1645602467046-Kurta-Sets.jpg"
+     alt="1">
+
+     <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/aae4be67-e611-47f4-b94e-92a16a36df731645602467007-Hangbags.jpg" 
+     alt="2">
+
+     <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/0f0be09e-4155-47bf-82e1-51044e7e7fd11645602467052-Kurtas.jpg" 
+     alt="3">
+
+     <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/dd4414f8-4e1b-4a22-997e-8e06c0a5ff861645602467167-T-Shirts.jpg" 
+     alt="4">
+
+     <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/f9ca5609-b634-42d4-8c08-a8eaebb818b71645602467085-Sarees.jpg" 
+     alt="5">
+     
+     <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/0b7869d4-f825-4625-b1db-58ad10a45f301645602467093-Shirts.jpg" 
+     alt="6">
+     
+     <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/b34a30a6-504b-4c94-b7e1-61391d536bc51645602467038-Jewellery.jpg"
+      alt="7">
+      
+     <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/b156f76a-26e7-4bce-9941-8a67d3c16f331645602467120-Teens-Wear.jpg" 
+     alt="8">
+
+     <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/fb091b07-c275-4578-b08d-b4f93dfe9e841645602466976-Beauty.jpg"
+      alt="9">
+      
+     <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/b827f900-ed61-4467-84fa-a6e357787e761645602467079-Plus-Size-Styles_W.jpg" 
+      alt="10">
+      
+      <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/cd083042-3bb2-4231-8b96-0234fc0ed23f1645602467032-Jeans.jpg" 
+      alt="11">
+      
+      <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/736f3951-e67b-414f-bfb1-56e2794d441d1645602467114-Sports-Shoes.jpg" 
+      alt="12">
+      
+      <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/d13255df-c846-4dbd-8458-77ccaba4f9eb1645602467142-Trousers.jpg" 
+      alt="13">
+      
+      <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/7a774194-94e6-49b5-b8bb-64bf9901bc671645602466989-Casual-Shoes.jpg" 
+      alt="14">
+      
+      <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/5860c3c2-a639-4625-ac1d-4d55406f128a1645602467134-Track-Pants.jpg" 
+      alt="15">
+      
+      <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/07e5c29a-2eab-4b2d-b617-6565ffe1f4701645602467025-Innerwear.jpg" 
+      alt="16">
+
+      <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/09b3164c-241a-4134-baa1-49b12c56c3901645602466968-Bath-Essentials.jpg"
+      alt="17">
+      
+      <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/171a820e-96f0-4b11-a138-03953a7e05481645602467153-Trousers_W.jpg" 
+      alt="18">
+      
+      <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/054a056f-33e8-4b6c-b747-9b88d7fce0a11645602467174-Watches.jpg" 
+      alt="19">
+      
+      <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/d3c5cd23-392f-40be-8080-99ffb79c27261645602467128-Tops.jpg" 
+      alt="20">
+      
+      <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/355b9499-3345-4457-8b3b-2eeceaecf4561645602467020-Infant-Essentials.jpg" 
+      alt="21">
+      
+      <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/7f814546-b705-4d9b-9ab5-1ddfeca786391645602467001-Flip-Flops.jpg" 
+      alt="22">
+      
+      <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/12c3b4aa-8160-442f-b93e-e896eafb1b0a1645602467160-T-Shirts-_-Shorts_Kids.jpg" 
+      alt="23">
+      
+      <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/67783047-7fcc-4530-9368-9be75a713e411645602466995-Dresses.jpg" 
+      alt="24">
+</div>
+
+<h4 class="h4text">DEALS ON TOP BRANDS</h4>
+<div id="dealOntop">
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/retaillabs/2020/9/3/f0dc0024-a8d3-4aec-9e1b-d9b6873b52d51599144996663-Crocs.jpg" 
+    alt="1">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/31/85d5e2e1-fa21-43b0-a352-438e15f1006e1598892141455-Nike.jpg" 
+    alt="">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/31/22b908fa-38aa-46a6-a3cd-a5ccd46b04ce1598892141560-Puma.jpg" 
+    alt="3">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/retaillabs/2020/9/26/adc58a2c-fa18-4b94-b2d6-4c692a44123d1601115417606-unnamed--6-.jpg" 
+    alt="4">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/31/8238147e-a86e-4fe4-a830-ab5c2c49beba1598892141840-W.jpg" 
+    alt="5">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/retaillabs/2020/9/1/7d0153c1-2fc4-49ec-ac7c-3c402d1ed45f1598948396008-USPA.jpg" 
+    alt="6">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/31/c6a4ec29-f907-4d54-8ed7-83006938b20c1598892141612-Tommy-Hilfiger.jpg" 
+    alt="7">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/26/d1fab403-7742-4a91-a781-2e36bea65a8a1598445950683-Men-s-Apparel---Roadster.png" 
+    alt="8">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/31/4abbda25-8d58-44f7-a986-c80fa31b08b31598892141513-Only.jpg" 
+    alt="9">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/26/72af0092-fd16-4b61-b1fb-e617c089fe251598456566139-image_jpeg1938580873.jpg" 
+    alt="10">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/9/5a5a162e-c4ad-4497-b995-a3c077d25df71596975348916-Women-s-Ethnic-Wear_Vishudh.jpg" 
+    alt="11">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/retaillabs/2020/9/1/da4935ce-8f3f-4273-bfbe-6ded783cf2131598948352513-Levis.jpg" 
+    alt="12">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/31/ee953e28-7ca8-4e08-a6a9-c51c98f823411598892141010-BIBA.jpg" 
+    alt="13">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/retaillabs/2020/9/1/08f15f56-156e-45c8-b0bc-7aecd0b122431598970514602-Veromoda.jpg" 
+    alt="14">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/31/64ec275a-9d3a-432c-b3df-736a7e9518d11598892141670-UCB.jpg" 
+    alt="15">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/26/0390ad1a-1262-4f7a-8f81-37c1644142a91598445950839-Sports---HRX-by-Hrithik-Roshan.png" 
+    alt="16">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/retaillabs/2020/10/7/697bb8c0-5c99-4d02-b0f9-d46ca72889db1602086685082-dressberrywomen.jpg" 
+    alt="17">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/retaillabs/2020/10/7/ff1358d9-6c6f-4fef-b169-d2875d43292c1602086685210-mhmen.jpg" 
+    alt="18">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/28/529db52b-ba58-423a-9ad6-3161ef642dff1598605975128-Women-s-Ethnic-Wear---Anouk.png" 
+    alt="19">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/retaillabs/2020/10/7/7c774b84-f2ec-4a3f-9208-8ba663ee4c221602086685157-hereand-now-men.jpg" 
+    alt="20">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/31/c8f8c028-21c6-4b65-9d77-188378312e561598892141092-Cutecumber.jpg" 
+    alt="21">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/retaillabs/2020/10/7/99f75f40-4d3f-4049-87da-be2662359aca1602087172072-sangriawomen.jpg" 
+    alt="22">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/retaillabs/2020/9/4/e6c7a718-acc0-4aa6-b04c-470ab139d66c1599230080722-F21--4-.jpg" 
+    alt="23">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/retaillabs/2021/11/12/2d4b2a2c-9332-4844-bb32-6ccf0e35fef21636697516790-Urbanic-1.jpg" 
+    alt="24">
+</div>
+
+<h4 class="h4text">BRANDS AT SLASHED PRICES</h4>
+<div id="brandsAtslashed">
+    <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/10/8cd7ec33-78fe-4b40-802d-365238b1376e1644475927229-Sangria.jpg" 
+    alt="1">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/8/5809282f-372d-4881-a8dc-95d5958a86be1644338988944-Roadster_HP.jpg" 
+    alt="2">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/8/e96d85b8-7a62-4f57-898a-6c291ffb4d7f1644339048429-HRX_HP.jpg" 
+    alt="3">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/10/e8546602-b217-45b0-a2d4-9469ba59938f1644475927176-Chemistry.jpg" 
+    alt="4">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/10/3cbf365e-8027-4aed-859b-6d40886418d21644475927244-Anouk--1-.jpg" 
+    alt="5">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/10/af85f560-cd67-469a-8405-4ec64a33f9971644475927251-Dressberry.jpg" 
+    alt="6">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/10/a0be607a-142c-4433-90ad-d13f22148f111644475927161-All-about-you.jpg" 
+    alt="7">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/10/b55aac85-4eb7-44d0-94bb-5077e8da70001644475927183-House-of-Pataudi.jpg" 
+    alt="8">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/10/f3120cb8-1af3-40fa-b7ed-02466eb03def1644475927205-Kook-N-Keech.jpg" 
+    alt="9">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/10/83ac07a7-65b3-4ede-a434-d9e3d103e3591644475927220-Moda-Rapido_1.jpg" 
+    alt="10">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/10/fa16e2c8-d5af-4d71-8dfb-14484fd0db811644475927213-Moda-Rapido_2.jpg" 
+    alt="11">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/10/40ddc119-a9bd-4117-ad8b-fc5bcc6a09141644475927190-ether.jpg" 
+    alt="12">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/10/4900ccb0-86be-4fa4-806e-9cad9496e3db1644475927196-INVICTUS.jpg" 
+    alt="13">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/10/fdbf3336-1777-46fd-aff6-7786268bc0d71644475927169-Harvard.jpg" 
+    alt="14">
+</div>
+
+<h4 class="h4text">BEST BUYS</h4>
+<div id="bestbuy">
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/420ebd43-1270-4954-bad6-e9e50b52384d1645602339422-Heels.jpg" 
+    alt="1">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/32f343c6-74e1-45c3-9923-8e161b484a641645602339538-Tops.jpg" 
+    alt="2">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/90867e68-f373-4e21-a3ac-bbbb4f199c7f1645602339404-Flats.jpg" 
+    alt="3">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/c62327cb-acc8-436b-9350-ac52c86719dd1645602339517-Sports-Shoes.jpg" 
+    alt="4">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/1908b009-5fed-4681-add0-62c8a838b72e1645602339504-Shorts.jpg" 
+    alt="5">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/c8946606-d520-4ba6-a9df-2e6a6ad70fe91645602339490-Sarees.jpg" 
+    alt="6">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/4d7c5595-b7be-42a4-8640-d66d65bd0a2d1645602339441-Innerwear.jpg" 
+    alt="7">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/b3fa47d6-deba-4568-b49c-1e406bd09ae61645602339531-Sweaters_M.jpg" 
+    alt="8">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/9fb1cb10-a734-4457-9f59-58abc3bab3631645602339477-Makeup-Essentials.jpg" 
+    alt="9">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/6b063e28-1fe4-410c-852b-a932a2c7252d1645602339462-Lingerie.jpg" 
+    alt="10">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/907cd30b-caa9-4030-9e6f-c015cfbb9ffa1645602339382-Belts-_-Wallets.jpg" 
+    alt="11">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/1cde2cbb-f762-40a4-bdc1-eadfb7616d841645602339410-Formal-Shoes.jpg" 
+    alt="12">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/e18662fa-fe65-437b-b385-71b31cd10f021645602339470-Loungewear.jpg" 
+    alt="13">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/5be435fa-3b6d-4b07-9394-70ee808fb6fa1645602339448-Kurtas-_-Sets.jpg" 
+    alt="14">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/a2637231-0f57-4f0e-b25b-b36f8914d1f91645602339554-T-Shirts-1.jpg" 
+    alt="15">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/23/989dd7d1-f411-496a-8c44-88d5fef68d611645602339546-T-Shirts.jpg" 
+    alt="16">
+</div>
+
+<h4 class="h4text">Stylofy LUXE</h4>
+<div id="myntraluxe">
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2021/11/12/8c07792e-bbf9-4935-8d9c-3a6a66eba4f01636726166240-HP-DKNY.jpg" 
+    alt="1">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2021/11/12/1cbf16e3-afe2-4013-af4d-4e427f1e30ee1636726166266-HP-Junghans.jpg" 
+    alt="2">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2021/11/12/98b141e0-8d71-4e1b-8afa-49d1b7113a141636726166278-HP-Luxe.jpg" 
+    alt="3">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2021/11/12/35f5db21-a813-4c1a-81e4-7ca2bc5a08351636726166290-HP-Oris.jpg" 
+    alt="4">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2021/11/12/9c262136-abbd-4087-9267-bc1f3b90b3c01636726166303-HP-RaymondWeil.jpg" 
+    alt="5">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2021/11/12/5158cd92-89b5-452e-97c5-938bdf63516e1636726166284-HP-Movado.jpg" 
+    alt="6">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2021/11/12/a9d39733-2022-4964-8c22-6c9e43d8502a1636726166259-HP-Hackett.jpg" 
+    alt="7">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2021/11/12/585ac7b3-36e3-4964-8707-a2249df2b1291636726166319-HP-versace.jpg" 
+    alt="8">
+
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2021/6/17/4fac3c61-9e54-486c-a083-6f61df81436c1623933299972-HPCarouselVisibility-MyntraLuxe-Tissot.jpg" 
+    alt="9">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2021/11/12/65d5107e-35cf-4176-aef3-b7ae77dd09761636726166252-HP-FredPerry.jpg" 
+    alt="10">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2021/6/17/9b04f96a-f1ed-4edc-8840-483719055fdb1623940080549-HPCarouselVisibility-MyntraLuxe-ExploreStore.jpg" 
+    alt="11">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2021/11/12/6eaf8591-e92b-4ab3-a4e5-f38caac6c7d91636726166295-HP-POLORalphLauren.jpg" 
+    alt="12">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2021/6/17/adf54639-1714-4935-8d22-ceef8ef1d8d31623940080665-HPCarouselVisibility-TheCollective-ExploreStore.jpg" 
+    alt="13">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2021/11/12/7e273a5a-9372-4956-af96-38aa903668201636726166272-HP-KarlLagerfeld.jpg" 
+    alt="14">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2021/6/17/bfa35f05-88b3-419f-af88-83c2ea0483f91623933299966-HPCarouselVisibility-MyntraLuxe-Tedbaker.jpg" 
+    alt="15">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2021/11/12/884c0181-9da3-43c4-89f5-8696b97ec7751636726166246-HP-Dyson.jpg" 
+    alt="16">
+</div>
+
+<h4 class="h4text">TRENDS FOR HER</h4>
+<div id="trendsforher">
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/fabc0cd1-5535-4ea4-bf36-2b1857f2eb371645776096602-SS22-Trends-Women-Intricate-Threadwork.jpg" 
+    alt="1">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/8/0d98cf21-4407-45e7-9b40-5f1fce278b6d1646753584544-SS22-TrendsForHer-Maxi-_-Mini-Dresses.jpg" 
+    alt="2">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/8/819cc1cd-678b-43d2-aa63-f34b44755e561646753584613-SS22-TrendsForHer-Wide-_-Bootcut-Bottoms.jpg" 
+    alt="3">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/8/2db05e12-4981-470f-a7cf-43355c4c3fb31646753584596-SS22-TrendsForHer-Tie-_-Dye-Sarees.jpg" 
+    alt="4">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/8/1a66b994-5b88-4d40-b8d3-cff57b438d4a1646753584579-SS22-TrendsForHer-Summer-Sandals.jpg" 
+    alt="5">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/17/6eed6ace-940e-47d4-8441-a362c2c4fba11647516398904-SS22-Trends-Women-Blouson-Tops.jpg" 
+    alt="6">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/a39069f5-a7c9-4a57-81a0-bd6f5eb65b061645776096638-SS22-Trends-Women-Minimalist-Jewellery.jpg" 
+    alt="7">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/17/80692309-98b1-4572-905b-6dcac3ecf32a1647516398938-SS22-Trends-Women-Gota-Patti-Kurtas.jpg" 
+    alt="8">
+</div>
+
+<h4 class="h4text">TRENDS FOR HIM</h4>
+<div id="trendsforhim">
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/17/ad181088-f7c7-4510-b10c-4ca597f9c33d1647516418475-SS22-Trends-Men-Printed-Sliders.jpg" 
+    alt="1">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/0df04bdd-853b-42fe-a494-00bc329ed1871645776676864-SS22-Trends-Men-Logo-Mania-Joggers.jpg" 
+    alt="2">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/8/43ed9e78-f1d5-4398-94bd-db22cf7165e41646753693317-SS22-TrendsForHim-Textured-Shoes.jpg" 
+    alt="3">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/8/2bd946cc-34f4-4958-91ed-91fa41eadd231646753693282-SS22-TrendsForHim-Colourblocked-Top-Wear.jpg" 
+    alt="4">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/17/d158792a-f92a-4eac-b9b1-a0f54e8fd59d1647516418438-SS22-Trends-Men-Military-Inspired-Styles.jpg" 
+    alt="5">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/8/bc7b623e-96e5-4811-8aba-679bf0c8ac401646753693245-SS22-TrendsForHim-Character-Tees.jpg" 
+    alt="6">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/17/85821f6f-0cf0-4100-9527-af1e8e080ae31647516418456-SS22-Trends-Men-Multi-Pocket-Nehru-Jackets.jpg" 
+    alt="7">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/21975168-2bdd-4f8d-9567-cb04a0132fbb1645776676882-SS22-Trends-Men-Logo-Mania-Tees.jpg" 
+    alt="8">
+</div>
+
+<h4 class="h4text">BEST OF KIDSWEAR</h4>
+<div id="bestforkid">
+    <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/14/0175ff89-fac8-46ba-856a-e95253fb0f501647247892132-Kurtas-_-Kurta-Sets.jpg" 
+    alt="1">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/14/971db165-cf95-476c-89d7-e4c9e41be7f51647247892158-Top-Brands-----3.jpg" 
+    alt="2">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/14/d7e692a5-e41d-4c1e-b50c-77d7d2f2ff101647247892167-Tops-_-Tees.jpg" 
+    alt="3">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/14/b4c398d8-fa05-49a9-b92c-6a3385bd43d71647247892116-Dresses.jpg" 
+    alt="4">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/14/d82a5429-eb15-4ae1-86f8-98cb62085d101647247892124-Kids-Wear.jpg" 
+    alt="5">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/14/4b9cb7c1-f624-47e7-9345-50e334aacf5e1647247892141-Shorts-_-Skirts.jpg" 
+    alt="6">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_140,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/14/7df8be43-773d-4a93-9e51-e19200b13f641647247892149-Teens-Wear.jpg" 
+    alt="7">
+</div>
+
+<h4 class="h4text">NEW IN TOP BRANDS</h4>
+<div id="newintopbrands">
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/26/1aaf5e6a-2978-4ed8-9634-1559f530d73b1645860227457-SS22-BestOfBrands-H_M.jpg" 
+    alt="1">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/26/3ce3c5e7-6060-4b15-b80b-6ddcd19d385a1645860227491-SS22-BestOfBrands-Max.jpg" 
+    alt="2">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/26/96b79372-852b-4e41-904a-ffc47f840d171645860227477-SS22-BestOfBrands-Levis.jpg" 
+    alt="3">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/26/ae3f2d8b-4f02-40ab-8233-d9ab9c7be4941645860227438-SS22-BestOfBrands-CKJeans.jpg" 
+    alt="4">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/26/426cb519-be57-4970-b23c-edb9e442cb761645860227551-SS22-BestOfBrands-W.jpg" 
+    alt="5">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/26/823d5fd5-48e6-4eb1-bd66-1ea70306275a1645860227498-SS22-BestOfBrands-Metro.jpg" 
+    alt="6">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/fd730d26-ff9d-41e5-af2e-b20f71757b5f1645779089335-BestOfBrands-Nike.jpg" 
+    alt="7">
+
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/26/b69656bd-7766-45db-96ea-d45df19a7a361645860227484-SS22-BestOfBrands-LP.jpg" 
+    alt="8">
+</div>
+
+<h4 class="h4text">NEWNESS FOR EVERY OCCASION</h4>
+<div id="newnessforeveryocc">
+    <img src="https://assets.myntassets.com/f_webp,w_245,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/407be362-f208-4d84-a723-f30045e4a6151645784458357-SS22-ShopByOccassion-BackToOffice-1-.jpg" 
+    alt="1">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_245,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/4ff811f4-1ece-46dc-baf4-3454c9dc41831645784458532-SS22-ShopByOccassion-PilatesClass-1-.jpg" 
+    alt="2">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_245,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/90f48b14-9947-4637-8f92-75e13dbc3a6f1645784458462-SS22-ShopByOccassion-HappyHours-1-.jpg" 
+    alt="3">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_245,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/d99b81d4-a71f-406e-9a54-5b14d2800d6d1645784458375-SS22-ShopByOccassion-BackToOffice.jpg" 
+    alt="4">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_245,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/8bde42f6-0001-4fdf-89ba-bdeb7d41a8081645784458585-SS22-ShopByOccassion-SummerWedding.jpg" 
+    alt="5">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_245,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/ff13247e-84d8-4bd3-ba09-38aa0eb61fc01645784458550-SS22-ShopByOccassion-PilatesClass.jpg" 
+    alt="6">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_245,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/0771918e-d4cb-4fc7-9bbe-719ff27f78201645784458410-SS22-ShopByOccassion-BeachVacation.jpg" 
+    alt="7">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_245,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/7920b25a-11be-46f0-8dee-efca6cd045911645784458497-SS22-ShopByOccassion-NetflixParty-1-.jpg" 
+    alt="8">
+</div>
+
+<h4 class="h4text">LATEST IN BEAUTY & GROOMING</h4>
+<div id="latestinbeauty">
+    <img src="https://assets.myntassets.com/f_webp,w_245,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/2c49ab74-5efa-4104-b71c-cdb4891762931645791174303-SS22-Beauty-Philips.jpg" 
+    alt="1">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_245,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/1850cdd3-e1be-47b3-ac4b-f8f395afce491645791174169-SS22-Beauty-Biotique.jpg" 
+    alt="2">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_245,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/7f7c368a-fa16-44f9-b7a2-8562ec21ba0a1645791174190-SS22-Beauty-ColorBar.jpg" 
+    alt="3">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_245,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/45b5535a-38c4-4c10-a301-3b6f3b56e43f1645791174266-SS22-Beauty-Lakme.jpg" 
+    alt="4">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_245,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/b0ed0a6a-5b23-42d4-9dce-3fceb80ff68c1645791174229-SS22-Beauty-Himalaya.jpg" 
+    alt="5">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_245,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/564b3c15-dba4-422e-acd5-72aac85b75541645791174149-SS22-Beauty-Beardo.jpg" 
+    alt="6">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_245,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/f4330a78-6a11-4edc-bad9-dc03f02dec0e1645791174210-SS22-Beauty-FacesCanada.jpg" 
+    alt="6">
+
+    <img src="https://assets.myntassets.com/f_webp,w_245,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/31253277-4623-43ed-9129-9b8015520e901645791174285-SS22-Beauty-Mamaearth.jpg" 
+    alt="7">
+</div>
+
+<h4 class="h4text">UNMISSABLE THIS SEASON</h4>
+<div id="unmissibleforseason">
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/1ec9ffd5-335f-4ecb-a7e9-ea403da9a7df1645805770868-SS22-SeasonChecklist-PricePoints-CleanBlueDenim.jpg" 
+    alt="1">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/a0e60587-5d1e-41f0-9d5f-f42a925a55921645793729467-SS22-SeasonChecklist-Trending-BlockHeels.jpg" 
+    alt="2">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/99a29231-2050-4fde-ad40-efa35de66e5b1645805770994-SS22-SeasonChecklist-PricePoints-TrendySneakers.jpg" 
+    alt="3">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/bdde4d47-9908-4764-b09e-5a55034e32b01645793729554-SS22-SeasonChecklist-Trending-Loungewera.jpg" 
+    alt="4">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/6bcf042c-5f07-47e2-a1cb-3da58c4f94951645793729590-SS22-SeasonChecklist-Trending-SlipOns.jpg" 
+    alt="5">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/50c525cc-6724-4d41-9e97-5b931a33631b1645806100291-SS22-SeasonChecklist-AddOns-New-Season-Wallets_.jpg" 
+    alt="6">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/1/62ef932d-b023-4c34-b649-bc3b399057a31646114955627-SS22-SeasonChecklist-Styling-Women-Kurtas.jpg" 
+    alt="7">
+
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/25/518f4774-cd01-4076-b2ee-03170d232c161645793729608-SS22-SeasonChecklist-Trending-Stylecast.jpg" 
+    alt="8">
+</div>
+
+<h4 class="h4text">COLOURS OF THE SEASON</h4>
+<div id="coloursofseassion">
+    <img src="https://assets.myntassets.com/f_webp,w_245,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/17/53a0e7bc-64e7-4fb3-94fd-a1ada51fbefa1647516450800-SS22-Colours-Metallic-Hues.jpg" 
+    alt="1">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_245,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/17/a6ef0785-eb3c-4726-a6ba-c09f6a44379c1647516450782-SS22-Colours-Elegant-Olive.jpg" 
+    alt="2">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_245,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/8/65446aed-c0e9-4bab-af02-3e96c6ad7ab51646753796263-SS22-Colours-Cobalt.jpg" 
+    alt="3">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_245,c_limit,fl_progressive,dpr_2.0/assets/images/2022/2/26/3b1d43f4-46bf-4e3f-903b-ec5ca5c2bac91645860983331-SS22-Colours-Mens-BreezyWhite.jpg" 
+    alt="4">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_245,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/17/96018800-d6b6-47e1-9998-62de5ce5c16a1647516450837-SS22-Colours-Soft-Pastels.jpg" 
+    alt="5">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_245,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/17/389fe98d-b379-4816-9411-63624b03c0671647516450765-SS22-Colours-Electric-Lime.jpg" 
+    alt="6">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_245,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/17/c1c00661-aff4-439e-9fd1-76982e7784831647516450875-SS22-Colours-Turquoise-Blue.jpg" 
+    alt="7"
+    
+    ><img src="https://assets.myntassets.com/f_webp,w_245,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/17/3a8ac38f-76fe-4ee4-84fa-f9bd4947c4431647516450746-SS22-Colours-Coffee-Browns.jpg" 
+    alt="8">
+</div>
+
+<h4 class="h4text">TOP INFLUENCERS EXCLUSIVE STYLES</h4>
+<div id="topinfluencer">
+    <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/16/c7fff41e-a426-4188-b319-bde1651f109e1647417948711-Studiocontent-HPBanner-Men-FestiveWearBythomson_19071gif.gif" 
+    alt="1">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/16/ab0ac260-8f5d-4a64-a626-83b58129e3491647417948743-Studiocontent-HPBanner-Women-WeddingOutfitsBy-thankgod_itsfashion.gif" 
+    alt="2">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/16/d210ddcf-73f4-4044-a75d-e8a6665fb9151647417948735-Studiocontent-HPBanner-Women-PartyLooksByiamartichauhan.gif" 
+    alt="3">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/16/8872ea7e-92a1-4be6-9706-d78845d480781647417948726-Studiocontent-HPBanner-Men-StreetWearByurban.lad.gif" 
+    alt="4">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/16/462e80ef-51d4-4a81-a509-72d45ec7f6331647417948751-Studiocontent-HPBanner-Women-WorkWearBasicsByoutlanSrish.gif" 
+    alt="5">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/16/f6826795-22fa-4d40-8573-d5e1ee1178531647417948719-Studiocontent-HPBanner-MenGymBasicsByiakashchoudhary.gif" 
+    alt="6">
+</div>
+
+
+<h4 class="h4text">BUDGET PICKS INFLUENCERS LOVE</h4>
+<div id="budgetpicksinfluencerslove">
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/16/f7dd9f7e-e99d-42ee-b968-22ffa616d8681647418063204-Studiocontent-HPGrid-SummerShirts.png" 
+    alt="1">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/16/13c90fd6-62ca-459a-86c6-ebdf19617a251647418063195-Studiocontent-HPGrid-ClassicDenim.png" 
+    alt="2">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/16/973855e5-a1d8-4a4a-810c-60a02068b0cb1647418043970-Studiocontent-HPGrid-TrendyTops.png" 
+    alt="3">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/16/bf5c8576-26e6-42a7-a4d0-eba5dd2a59f11647418043962-Studiocontent-HPGrid-SummerSkirts.png" 
+    alt="4">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/16/f9d82a54-06f3-4bfb-8dd3-0f6c258212a71647418043955-Studiocontent-HPGrid-ElegantSarees.png" 
+    alt="5">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/16/e14a3767-485e-4f99-a92f-e5880dcc39181647418063210-Studiocontent-HPGrid-TraditionalKurtas.png" 
+    alt="6">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/16/5ba2861b-33cd-45cb-a526-cca93d2629a31647418063217-Studiocontent-HPGrid-TrendyTshirts.png" 
+    alt="7">
+
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/16/37ad6a46-8dfc-46cc-9d4b-a1781079a0511647418043947-Studiocontent-HPGrid-DreamyDresses.png" 
+    alt="8">
+</div>
+
+
+<h4 class="h4text">TRENDING OUTFITS BY INFLUENCERS</h4>
+<div id="trendingoutfitsbyinfluencers">
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/16/0d7a22b9-e201-44db-ba04-6dfba8ebd5061647418012721-Studiocontent-HPCarousel-Women-WesternWear.jpg" 
+    alt="1">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/16/d8bee915-9dbd-4cbb-9562-896dd16afdf31647418012563-Studiocontent-HPCarousel-Men-BeyondBasicsCasulaWear.jpg" 
+    alt="2">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/16/fa1a37d5-db35-4df5-9f3b-dfeebf9a22bd1647418012703-Studiocontent-HPCarousel-Women-IndianWearGuide.jpg" 
+    alt="3">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/16/843d4a44-833a-4179-a5a2-7f8c52bb1ef71647418012580-Studiocontent-HPCarousel-Men-FootwearFavouritesjpg.jpg" 
+    alt="4">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/16/ce751fad-7e3a-456d-87cd-457c6de7fccc1647418012597-Studiocontent-HPCarousel-Men-FormalWear.jpg" 
+    alt="5">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/16/0b6937a5-cf76-49c6-a3ab-551b7a17fafa1647418012686-Studiocontent-HPCarousel-Women-GymWear.jpg" 
+    alt="6">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/16/3edddaf4-c192-4651-966d-6b8e04fa309b1647418012668-Studiocontent-HPCarousel-Women-FormalWear.jpg" 
+    alt="7">
+    
+    <img src="https://assets.myntassets.com/f_webp,w_122,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/16/99b98dd2-83e4-4ac1-b2a5-b0bf8b81d62a1647418012633-Studiocontent-HPCarousel-Men-LoungeWear.jpg" 
+    alt="8">
+</div>
+<br>
+<br>
+<br>
+<br>
+
+
+<div id="footbody">
+    <div  id="footerDiv"> 
+        <div id="mainbox">
+            <div class="box1">
+                <h5 class="h5_g">ONLINE SHOPPING</h5>
+               
+                <p>Men</p>
+                <p>Women</p>
+                <p>Home&amp;Living</p>
+                <p>Beauty</p>
+                <p>Gifts Cards</p>
+                <p>Myntra Insider</p>
         
-            <img src="https://assets.myntassets.com/f_webp,w_89,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/22/0d424e46-f1ab-4a07-a1d3-2022c1c504341669126107909-Budget-Buys_Makeup-Essentials.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_89,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/22/21c605d4-10bd-4f8b-90ff-d4d0b9ffe9381669126108049-Budget-Buys_Shampoos-_-Conditioners.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_89,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/22/2b90cd24-0974-4ae0-ab87-a221af5a34301669126107653-Budget-Buys_Flats-_-Heels.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_89,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/22/5126b4a0-e422-453f-8d86-0529168bbc101669126107812-Budget-Buys_Kids-Wear.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_89,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/22/d1842a56-6e30-4fc4-8151-5de17b0a53d81669126108419-Budget-Buys_Women_s-Activewear.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_89,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/22/d4fa83e5-45e1-4bae-987e-e207a59df3171669126107621-Budget-Buys_Dresses.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_89,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/22/03a59be8-870b-46eb-ac88-afa9f222cf831669126107859-Budget-Buys_Kurtas.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_89,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/22/48ca5042-412c-4ee5-a987-0f5a52d854bc1669126107785-Budget-Buys_Jeans.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_89,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/22/155ac6a3-e1fc-4eea-a576-cb7ffaa5ee451669126108365-Budget-Buys_T-Shirts-1.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/22/19bf2972-f2b8-4cf5-8fc1-f34b3504c5bf1669126107582-Budget-Buys_Casual-Shirts.jpg" alt="">
+                <h5 class="h5_g">USEFUL LINKS</h5>
+                <p>Blog</p>
+                <p>Careers</p>
+                <p>Site Map</p>
+                <p>Corporate Information</p>
+    
+            </div>
+            <div class="box2">
+            <h5 class="h5_g">CUSTOMER POLICIES</h5>
+                <p>Contact Us</p>
+                <p>FAQ</p>
+                <p>T&amp;C</p>
+                <p>Terms Of Use</p>
+                <p>Track Orders</p>
+                <p>Shipping</p>
+                <p>Cancellation</p>
+                <p>Returns</p>
+                <p>Privacy Policy</p>
+                <p>Grievance Officer</p>
+        
+            </div>
+        
+            <div class="box3">
+                  <h5>EXPERIENCE MYNTRA APP ON MOBILE</h5>
+    
+              <div id="logo1">
+                <a href="https://play.google.com/store/apps/details?id=com.myntra.android&pli=1"> 
+                     <img  src="https://constant.myntassets.com/web/assets/img/80cc455a-92d2-4b5c-a038-7da0d92af33f1539674178924-google_play.png" alt="playstore">
+                </a>
+                <a href="https://apps.apple.com/in/app/myntra-indias-fashion-store/id907394059"> 
+                    <img src="https://constant.myntassets.com/web/assets/img/bc5e11ad-0250-420a-ac71-115a57ca35d51539674178941-apple_store.png" alt="applestore">
+                </a>
+             
+              </div> 
+    
+             <h5>KEEP IN Touch</h5>
+         <div class="logo2">
+            <img  src="https://constant.myntassets.com/web/assets/img/d2bec182-bef5-4fab-ade0-034d21ec82e31574604275433-fb.png" alt="">
+            <img  src="https://constant.myntassets.com/web/assets/img/f10bc513-c5a4-490c-9a9c-eb7a3cc8252b1574604275383-twitter.png " alt="">
+            <img  src="https://constant.myntassets.com/web/assets/img/a7e3c86e-566a-44a6-a733-179389dd87111574604275355-yt.png" alt="">
+            <img  src="https://constant.myntassets.com/web/assets/img/b4fcca19-5fc1-4199-93ca-4cae3210ef7f1574604275408-insta.png" alt="">
         </div>
-    </div>
-    <div id="banner">
-        <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/12/7/28cff5a2-9d32-42f6-b160-64617ea62e211670406647314-Top-Listed-Styles.jpg" alt="">
-    </div>
-    <div>
-        <div id="cards">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/24/0eac070f-82f7-45a4-b094-d1795c94dff61669282234934-Quick-Links-_Watches.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/24/6ee83a1d-e513-466f-8e82-adafd3bc85f61669282235339-Quicklinks_Flip-Flops.png" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/24/c270e375-2727-454a-adbe-17024a9240c51669282234902-imgpsh_fullsize_anim-copy.png" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/24/d24307ef-3093-4620-8604-26fbec371e281669282235386-Quicklinks_Sandals.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/24/935ff0f5-0a43-45d5-975e-3fe064b1ebc61669282235505-Quicklinks_Trolley-Bags.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/24/f155c779-ad16-4aff-9977-1409c2063cd81669282235397-Quicklinks_Shorts.png" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/24/2df87873-6331-4687-b575-8b7034aae3f91669282235446-Quicklinks_Sporty-Tees.png" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/24/387f34ae-354b-4001-881b-044d84333c1a1669282235132-Quick-Links_Smartwatches.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/24/d02c397e-3276-4ada-a784-0376508d96c01669282235207-Quick-Links_Track-Pants.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/24/5bbc66fe-47f4-43ff-ae50-0bbd901c92721669282234924-Quick-Links-_T-Shirts.jpg" alt="">
+          </div>
+    
+          <div class="box4">
+            <div id="content">
+            <img src="https://constant.myntassets.com/web/assets/img/6c3306ca-1efa-4a27-8769-3b69d16948741574602902452-original.png" 
+            alt="">
+            <h5>100% ORIGINAL <span id="info">guarantee for all products at Stylofy.com</span></h5>
+           </div>
+           <div id="content">
+            <img src="https://constant.myntassets.com/web/assets/img/ef05d6ec-950a-4d01-bbfa-e8e5af80ffe31574602902427-30days.png" alt="">
+            <h5>Return within 30days <span>of receiving your order</span></h5>
+           </div>
+          </div>
+    
+        </div>
+    
+    
+    
+        <h5>POPULAR SEARCHES</h5>
+        <p>
+             Makeup | Dresses | For Girls | T-Shirts | Sandals | Headphones | Babydolls | Blazers | For Men | Handbags | Ladies | Watches | Bags | Sport Shoes | Reebok Shoes | Puma Shoes | Boxers | Wallets | Tops | Earrings | Fastrack | Watches | Kurtis | Nike | Smart | Watches | Titan Watches | Designer Blouse | Gowns | Rings | Cricket Shoes | Forever 21 | Eye Makeup | Photo Frames | Punjabi Suits | Bikini | Myntra Fashion Show | Lipstick | Saree | Watches | Dresses | Lehenga | Nike Shoes | Goggles | Bras | Suit | Chinos | Shoes | Adidas Shoes | Woodland Shoes | Jewellery | Designers Sarees.
+            <br><br>
+               In case of any concern,<span id="contact"> Contact Us</span>  </p>
+            <p id="rightsreserve">© 2023 www.Stylofy.com. All rights reserved.
+           </p> 
+           <hr>
+    
+           <h5>Registered Office Address</h5>
+    
+         <p>
+            Buildings Alyssa, <br>
+            Begonia and Clover situated in Embassy Tech Village, <br>
+            Outer Ring Road, <br>
+            Devarabeesanahalli Village, <br>
+            Varthur Hobli, <br>
+            Bengaluru - 560103, India <br>
+          
+            
+           <p id="cin">
+            CIN: U72300KA2007PTC041799 <br>
+            Telephone:  <span id="contact"> +91-80-61561999 </span><br>
+           </p>
+        </p>
+        <hr>
+        <h5>ONLINE SHOPPING MADE EASY AT Stylofy</h5>
+        <p>If you would like to experience the best of online shopping for men, women and kids in India, you are at the right place. Stylofy is the ultimate destination for fashion and lifestyle, being host to a wide array of merchandise including clothing, footwear, accessories, jewellery, personal care products and more. It is time to redefine your style statement with our treasure-trove of trendy items. Our online store brings you the latest in designer products straight out of fashion houses. You can shop online at Myntra from the comfort of your home and get your favourites delivered right to your doorstep.
+        </p>
+        <h5>BEST ONLINE SHOPPING SITE IN INDIA FOR FASHION</h5>
+        <p>Be it clothing, footwear or accessories, Stylofy offers you the ideal combination of fashion and functionality for men, women and kids. You will realise that the sky is the limit when it comes to the types of outfits that you can purchase for different occasions.
+            <ol>
+                
+                <li>Smart men's clothing - <span id="para"> At Stylofy you will find myriad options in smart formal shirts and trousers, cool T-shirts and jeans, or kurta and pyjama combinations for men. Wear your attitude with printed T-shirts. Create the back-to-campus vibe with varsity T-shirts and distressed jeans. Be it gingham, buffalo, or window-pane style, checked shirts are unbeatably smart. Team them up with chinos, cuffed jeans or cropped trousers for a smart casual look. Opt for a stylish layered look with biker jackets. Head out in cloudy weather with courage in water-resistant jackets. Browse through our innerwear section to find supportive garments which would keep you confident in any outfit.</span></li>
+               <br>
+                <li>Trendy women's clothing - <span id="para"> Online shopping for women at Stylofy is a mood-elevating experience. Look hip and stay comfortable with chinos and printed shorts this summer. Look hot on your date dressed in a little black dress, or opt for red dresses for a sassy vibe. Striped dresses and T-shirts represent the classic spirit of nautical fashion. Choose your favourites from among Bardot, off-shoulder, shirt-style, blouson, embroidered and peplum tops, to name a few. Team them up with skinny-fit jeans, skirts or palazzos. Kurtis and jeans make the perfect fusion-wear combination for the cool urbanite. Our grand sarees and lehenga-choli selections are perfect to make an impression at big social events such as weddings. Our salwar-kameez sets, kurtas and Patiala suits make comfortable options for regular wear.
+                </span></li>
+                <br>
+                <li>Fashionable footwear - <span id="para"> While clothes maketh the man, the type of footwear you wear reflects your personality. We bring you an exhaustive lineup of options in casual shoes for men, such as sneakers and loafers. Make a power statement at work dressed in brogues and oxfords. Practice for your marathon with running shoes for men and women. Choose shoes for individual games such as tennis, football, basketball, and the like. Or step into the casual style and comfort offered by sandals, sliders, and flip-flops. Explore our lineup of fashionable footwear for ladies, including pumps, heeled boots, wedge-heels, and pencil-heels. Or enjoy the best of comfort and style with embellished and metallic flats.</span></li>
+                <br>
+                <li>Stylish accessories - <span id="para"> Stylofy is one of the best online shopping sites for classy accessories that perfectly complement your outfits. You can select smart analogue or digital watches and match them up with belts and ties. Pick up spacious bags, backpacks, and wallets to store your essentials in style. Whether you prefer minimal jewellery or grand and sparkling pieces, our online jewellery collection offers you many impressive options.</span></li>
+                <br>
+                <li>Fun and frolic - <span id="para"> Online shopping for kids at Stylofy is a complete joy. Your little princess is going to love the wide variety of pretty dresses, ballerina shoes, headbands and clips. Delight your son by picking up sports shoes, superhero T-shirts, football jerseys and much more from our online store. Check out our lineup of toys with which you can create memories to cherish.</span></li>
+                <br>
+                <li>Beauty begins here<span id="para">You can also refresh, rejuvenate and reveal beautiful skin with personal care, beauty and grooming products from Stylofy. Our soaps, shower gels, skin care creams, lotions and other ayurvedic products are specially formulated to reduce the effect of aging and offer the ideal cleansing experience. Keep your scalp clean and your hair uber-stylish with shampoos and hair care products. Choose makeup to enhance your natural beauty.</span></li>
+                <br>
+            </ol>
+                <p>Stylofy is one of the best online shopping sites in India which could help transform your living spaces completely. Add colour and personality to your bedrooms with bed linen and curtains. Use smart tableware to impress your guest. Wall decor, clocks, photo frames and artificial plants are sure to breathe life into any corner of your home.</p>
+        </p>
+        <br>
+        <h5>AFFORDABLE FASHION AT YOUR FINGERTIPS</h5>
+        <p>
+            Stylofy is one of the unique online shopping sites in India where fashion is accessible to all. Check out our new arrivals to view the latest designer clothing, footwear and accessories in the market. You can get your hands on the trendiest style every season in western wear. You can also avail the best of ethnic fashion during all Indian festive occasions. You are sure to be impressed with our seasonal discounts on footwear, trousers, shirts, backpacks and more. The end-of-season sale is the ultimate experience when fashion gets unbelievably affordable.</p>
+        <br>
+        <h5>Stylofy INSIDER</h5>
+        <p>
+            Every online shopping experience is precious. Hence, a cashless reward-based customer loyalty program called Stylofy Insider was introduced to enhance your online experience. The program is applicable to every registered customer and measures rewards in the form of Insider Points. <br>
+            <br>
+            There are four levels to achieve in the program, as the Insider Points accumulate. They are - Insider, Select, Elite or Icon. Apart from offering discounts on Stylofy and partner platform coupons, each tier comes with its own special perks.
        
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/24/7cfd0226-2432-4b44-8e54-e5ebd971a4e71669282235068-Quick-Links_Kurtas.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/24/a5237de7-461d-4b3b-9b87-5966ee32d2231669282235059-Quick-Links_Kurta-Sets.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/24/1b5333c3-221b-4c18-8237-32c5099df3f11669282235187-Quick-Links_Tops-_-Tunics.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/24/ad2a26c0-42be-44f4-a96c-06d12b1503761669282235098-Quick-Links_Sarees.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/24/38321884-157c-4e31-972c-c0b026fa8c8b1669282234973-Quick-Links_Dresses.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/24/b8a88e48-283a-4e6f-a103-9f731576f3991669282235247-Quick-Links_women-Jeans.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/24/39eb221b-be96-4b8c-8011-dc1001bf44651669282235257-Quicklinks_-Jewellery.png" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/24/53305c45-1afe-4ed0-8f36-839f8c8f93041669282235267-Quicklinks_Active-wear.png" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/24/0933071b-61e5-415c-bce5-35a759d481651669282235177-Quick-Links_Thermals.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_98,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/24/2ab9b180-ab97-4dc1-bbbf-b90a9333e37e1669282235144-Quick-Links_Sweaters.jpg" alt="">
-        </div>     
-    </div>
-    <div>
-        <div id="banner">
-        <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/12/7/418510b5-16fc-4853-9323-1785df1a38ce1670406564990-Never-Seen-Before-Offers.jpg" alt="">
-    </div>
-    <div>
-        <div id="cards1">
-            <img src="https://assets.myntassets.com/f_webp,w_108,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/22/dad0a3ea-cfd7-496c-8396-a2b62c6eb5491669128364179-NEW_BALANCE.png" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_108,c_limit,fl_progressive,dpr_2.0/assets/images/2022/12/6/9ea32ee1-c2d9-4567-a114-49023ab871121670305246536-image_jpeg240129674.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_108,c_limit,fl_progressive,dpr_2.0/assets/images/2022/12/6/682ed82b-415e-4e02-806f-71d0e15f4d2a1670305267685-image_png1974730271.png" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_108,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/22/213de7f1-a12c-4545-90bf-eb2da5ed5be61669128364043-GANT.png" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_108,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/22/44e2cbe1-64a7-4084-b9ca-118a7ce8672e1669128364091-Koton.png" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_108,c_limit,fl_progressive,dpr_2.0/assets/images/2022/12/6/0f575d53-fc61-44d9-b66b-33feb313bfd81670305340733-image_jpeg_2055234102.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_108,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/22/4e67fbfc-8378-46e2-92c1-54eea5c54c071669128364144-Marks_and_Spencers.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_108,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/22/a6253d81-acea-441b-a322-0e78b5a572631669128364235-Under_Armour.png" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_108,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/22/ce294e2d-4858-40a5-b1d9-3f4ee2eeaf861669128364204-Scuderia_Ferarri_.png" alt="">
+        <ul>
+        <h4>Insider</h4>
+          <li id="para">Opportunity to master any domain in fashion with tips from celebrity stylists at Stylofy Masterclass sessions.</li> 
+          <li id="para"> Curated collections from celeb stylists.</li>
+        </ul>
+        <ul>
+           <h4>Elite</h4> 
+          <li id="para">VIP access to special sale events such as the End of Reason Sale (EORS) and product launches.</li>
+          <li id="para">Exclusive early access to Limited Edition products</li>
+       </ul>
+       <ul>
+           <h4>Icon</h4>
+           <li id="para">Chance to get on guest lists for special events.</li>
+       </ul>
+        </p>
+    
+        <h5> Stylofy Studio - The Personalised Fashion Feed You Wouldn't Want To Miss Out On</h5>
+        <p>The world wide web is evolving at a relentless pace, and with an accelerated growth each passing year, there is bound to be an overwhelming surge of online content. It was for this very reason that personalisation of search feeds was proposed as a solution to combat the overload of irrelevant information. <br>
+          <br>
+            Several social media platforms such as Facebook and Instagram along with various online shopping websites have chosen to help filter content, increasing user engagement, retention and customer loyalty.  <br>
+            <br>
+            Stylofy is one such online shopping website that joins the list of platforms that help curate a personalised fashion feed. Named theStylofy Studio, this personalised search feed brings you the latest men and women's fashion trends, celebrity styles, branded content and daily updates from your favourite fashion labels. <br>
+            <br>
+            If you are wondering how impactful Stylofy Studio can be, we are listing out five perks of having a rich, meaningful, and personalised fashion feed in your life.
+        <ol>
+            <li>Keep Up With What Your Favourite Fashion Icons Are Upto <span id="para">
+                <br> <br>
+                The #OOTD, AKA outfit of the day hashtag trend has been a rage among fashion bloggers and stylists. The whole concept of building an outfit from scratch and showcasing it to a huge community of enthusiasts using the hashtag has helped individuals with understanding trends and making suitable for daily wear.
+                <br> <br>
+                Imagine if you could keep up with every piece of clothing and accessory worn by the fashion icons you look upto. From Sonam Kapoor to Hailey Baldwin Bieber, Stylofy Studio has a ‘Stories’ feature to help track celebrity fashion trends, exploring details such as their outfit of the day. This way, you would not ever miss out on the latest celebrity fashion trends, from all around the world.</span>
+            </li>
+            <br>
+            <li>Quick Fashion Tip And Tricks <span id="para"> <br> <br>
+                Whether it is draping a saree into a dhoti style, wearing the right lingerie under certain dresses or discovering multiple uses out of heavy ethnic wear, Stylofy Studio will help you acquire some unique and useful fashion hacks. Each hack is designed with the intention to help you get the best wear out of everything in your wardrobe.</span>
+            </li>
+            <br>
+            <li>Updates on What Is Trending and New Product Launches<span id="para"> <br> <br>
+                Since fast fashion seems to be extremely hard to keep up with these days, a quick update on what is trending in accessories, clothing and footwear would certainly be of great help. Stylofy Studio helps you stay connected to the most beloved and sought after brands such as Puma, Coverstory, The Label Life and so many more.
+                <br> <br>
+                Your feed keeps you updated with stories of what the brands are creating including clothing, footwear and jewellery, along with their new seasonal collections.</span>
+            </li>
+            <br>
+            <li>Explicit Step-By-Step Beauty Routines From Experts <span id="para">
+                <br><br>
+                Just like fashion, the beauty community keeps on growing, and with brands such as Huda Beauty, MAC and the latest Kay Beauty by Katrina Kaif, are constantly coming up with mind-blowing products. Whether it is creating a no-makeup look, different winged eyeliners, do-it-yourself facial masks and other personal care beauty routines, Myntra Studio is here for you.</span>
+            </li>
+            <br>
+            <li>Celebrity Confessions And A Look Into Their Lives<span id="para"> <br><br>
+                A bonus feature that Stylofy Studio has in store for you is celebrity confessions and a peek into their lives. So, Stylofy helps you stay connected to your most beloved celebrities in a matter of clicks.
+                <br><br>
+                If you are very particular when it comes to the content you wish to view and engage with on social media, the ability to intricately filter content helps achieve that. Applying the same formula for hardcore fashion lovers and shoppers, Myntra Studio brings you a daily fashion fix incorporating everything that you love, all at one place. Sign up on Myntra today and start organising your fashion feed, just the way you want to.</span>
+            </li>
+            <br>
+        </ol>
         
-            <img src="https://assets.myntassets.com/f_webp,w_108,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/22/9eafe17b-08b6-4deb-a9d4-71d669df0a171669128364245-URBANIC.png" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_108,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/22/ae80119a-e9ed-4dc3-aab6-76023ff6d0861669128364171-NA-KD.png" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_108,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/22/5266cae2-c776-4191-b5b3-e233278a52fc1669128364026-FOREVER_NEW.png" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_108,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/22/ddbd5fba-da5f-4bdf-8ebc-2012c832ccd41669128364119-MANGO.png" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_108,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/22/af96cb36-e63a-4f16-a9a5-ae1fe5869cf51669128363986-8_SECONDS.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_108,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/22/a8a9c06e-aa3a-4713-a407-5b4b3ad25ce41669128364255-Zalora.png" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_108,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/22/145efd9d-25b8-4b2f-8449-8ee160fdbba41669128364081-JC_collection.png" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_108,c_limit,fl_progressive,dpr_2.0/assets/images/2022/11/22/981d5c34-3b2e-4f29-83f0-54ba71661b0c1669128364063-GUESS_-copy-_.jpg" alt="">
-            <img src="https://assets.myntassets.com/f_webp,w_108,c_limit,fl_progressive,dpr_2.0/assets/images/2022/12/6/e1e5025c-6e03-4748-8da3-a43b2836d3ab1670305319476-_18965747722F1f7d2fe7_fab2_4d54_b725_723ec650bfd5-2Fimage_jpeg_747326334.jpg" alt="">
-        </div>
-    </div>
-    <div>
-        <div id="banner">
-        <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/12/7/3a8ff13b-934d-4ad3-b73f-bb64660dd82a1670406141566-SALE-Sectional-Header_1-Line-----7.jpg" alt="">
-    </div>
-    <div>
-        <div id="cards3">
-            <img src="https://iili.io/HoEOPG2.jpg" alt="">
-            <img src="https://iili.io/HoEe4Ag.jpg" alt="">
-            <img src="https://iili.io/HoEetKN.jpg" alt="">
-            <img src="https://iili.io/HoEkflS.jpg" alt="">
-            <img src="https://iili.io/HoEvx2I.jpg" alt="">
-            <img src="https://iili.io/HoEvaEl.jpg" alt="">
-
-            <img src="https://iili.io/HoEL51n.jpg" alt="">
-            <img src="https://iili.io/HoELN7j.jpg" alt="">
-            <img src="https://iili.io/HoELrEF.jpg" alt="">
-            <img src="https://iili.io/HoEQATQ.jpg" alt="">
-            <img src="https://iili.io/HoEQYCP.jpg" alt="">
-            <img src="https://iili.io/HoEQVuR.jpg" alt="">
-
-            <img src="https://iili.io/HoEQptV.jpg" alt="">
-            <img src="https://iili.io/HoEZ2KF.jpg" alt="">
-            <img src="https://iili.io/HoEZxVI.jpg" alt="">
-            <img src="https://iili.io/HoEZaDl.jpg" alt="">
-            <img src="https://iili.io/HoEZS0F.jpg" alt="">
-            <img src="https://iili.io/HoEZbgn.jpg" alt="">
-
-            <img src="https://iili.io/HoEtf19.jpg" alt="">
-            <img src="https://iili.io/HoEtlkJ.jpg" alt="">
-            <img src="https://iili.io/HoEthrX.jpg" alt="">
-            <img src="https://iili.io/HoEtP2e.jpg" alt="">
-            <img src="https://iili.io/HoEtZTx.jpg" alt="">
-            <img src="https://iili.io/HoEDdva.jpg" alt="">
-            
-            <img src="https://iili.io/HoEb2K7.jpg" alt="">
-            <img src="https://iili.io/HoEpx3P.jpg" alt="">
-            <img src="https://iili.io/HoEpWwG.jpg" alt="">
-            <img src="https://iili.io/HoEpLKB.jpg" alt="">
-            <img src="https://iili.io/HoEy3lI.jpg" alt="">
-            <img src="https://iili.io/HoEylxj.jpg" alt="">
-        </div>
-    </div>
-    <div id="footerbg">
-        <div id="footer1">
-            <div>
-                <div id="details">
-                    <h5 id="title">ONLINE SHOPPING</h5>
-                    <p>Men</p>
-                    <p>Women</p>
-                    <p>Kids</p>
-                    <p>Home & Living</p>
-                    <p>Beauty</p>
-                    <p>Gift Cards</p>
-                    <p>MY LOOK Insider</p>
-                </div>
-                <div id="details">
-                    <h5 id="title">USEFUL LINKS</h5>
-                    <p>Blog</p>
-                    <p>Careers</p>
-                    <p>Site Map</p>
-                    <p>Corporate Information</p>
-                    <p>Whitehat</p>
-                </div>
-            </div>
-            <div>
-                <div id="details">
-                    <h5 id="title">CUSTOMER POLICIES</h5>
-                    <p>Contact Us</p>
-                    <p>FAQ</p>
-                    <p>Terms Of Use</p>
-                    <p>Track Orders</p>
-                    <p>Shipping</p>
-                    <p>Cancellation</p>
-                    <p>Returns</p>
-                    <p>Privacy policy</p>
-                    <p>Grievance Officer</p>
-                </div>
-
-            </div>
-            <div>
-                <div id="details">
-                    <h5 id="title">EXPERIENCE MY LOOK APP ON MOBILE</h5>
-                    <div id="contact">
-                        <img src="https://constant.myntassets.com/web/assets/img/80cc455a-92d2-4b5c-a038-7da0d92af33f1539674178924-google_play.png" alt="">
-                        <img src="https://constant.myntassets.com/web/assets/img/bc5e11ad-0250-420a-ac71-115a57ca35d51539674178941-apple_store.png" alt="">
-                    </div>
-                </div>
-                <div id="details">
-                    <h5 id="title">KEEP IN TOUCH</h5>
-                    <div id="contact1">
-                        <img src="https://constant.myntassets.com/web/assets/img/d2bec182-bef5-4fab-ade0-034d21ec82e31574604275433-fb.png" alt="">
-                        <img src="https://constant.myntassets.com/web/assets/img/f10bc513-c5a4-490c-9a9c-eb7a3cc8252b1574604275383-twitter.png" alt="">
-                        <img src="https://constant.myntassets.com/web/assets/img/a7e3c86e-566a-44a6-a733-179389dd87111574604275355-yt.png" alt="">
-                        <img src="https://constant.myntassets.com/web/assets/img/b4fcca19-5fc1-4199-93ca-4cae3210ef7f1574604275408-insta.png" alt="">
-                    </div>
-                </div>
-            </div>
-            <div id="garaunty">
-                <div id="guarantee">
-                    <div>
-                        <img src="https://constant.myntassets.com/web/assets/img/6c3306ca-1efa-4a27-8769-3b69d16948741574602902452-original.png" alt="">
-                    </div>
-                    <p><span> 100% ORIGINAL</span> guarantee for all products at mybook.com</p>
-                </div>
-                <div id="guarantee">
-                    <div>
-                        <img src="https://constant.myntassets.com/web/assets/img/ef05d6ec-950a-4d01-bbfa-e8e5af80ffe31574602902427-30days.png" alt="">
-                    </div>
-                    <p><span> Return within 30days</span>of receiving your order</p>
-                </div>
-            </div>
-        </div>
-        <hr>
-        <div id="footer2">         
-            <h5 id="title">POPULAR SEARCHES</h5>
-            <p>Makeup I Dresses For Girls I T-Shirts I Sandals I Headphones I Babydolls I Blazers For Men I Handbags I Ladies Watches I Bags I Sport Shoes I Reebok Shoes I Puma
-                Shoes I Boxers I Wallets I Tops I Earrings I Fastrack Watches I Kurtis I Nike I Smart Watches I Titan Watches I Designer Blouse I Gowns I Rings I Cricket Shoes I Forever
-                21 I Eye Makeup I Photo Frames I Punjabi Suits I Bikini I MY LOOK Fashion Show I Lipstick I Saree I Watches I Dresses I Lehenga I Nike Shoes I Goggles I Bras I Suit I
-                Chinos I Shoes I Adidas Shoes I Woodland Shoes I Jewellery I Designers Sarees
-            </p>
-            <div>
-                <p>In case of any concern, <span>Contact Us</span></p>
-                <p>&#xa9 2022 www.MY LOOK.com. All rights reserved.</p>
-            </div>  
-        </div>
-        <hr>
-        <div id="footer3">
-            <h5 id="title">Registered Office Address</h5>
-            <p>Buildings Alyssa,</p>
-            <p>Begonia and Clover situated in Embassy Tech Village,</p>
-            <p>Outer Ring Road,</p>
-            <p>Devarabeesanahalli Village,</p>
-            <div>
-                <p>Varthur Hobli</p>
-                <p>CIN: U72300KA2007PTC041799</p>      
-            </div>
-            <div>
-                <p>Bengaluru - 560103, India</p>  
-                <p>Telephone: <span>+91-80-61561999</span></p> 
-            </div>
-        </div>
-        <hr>
-        <div id="footer2">
-            <h5 id="title">ONLINE SHOPPING MADE EASY AT MY LOOK</h5>
-            <p>If you would like to experience the best of online shopping for men, women and kids in India, you are at the right place MY LOOK is the ultimate destination for fashion and lifestyle, being
-                host to a wide array of merchandise including clothing, footwear, accessories, jewellery, personal care products and more. It is time to redefine your style statement with our treasure-trove
-                of trendy items. Our online store brings you the latest in designer products straight out of fashion houses. You can shop online at MY LOOK from the comfort of your home and get your
-                favourites delivered right to your doorstep.
-            </p>
-        </div>
-        <div id="footer2">
-            <h5 id="title">BEST ONLINE SHOPPING SITE IN INDIA FOR FASHION</h5>
-            <p>
-                Be it clothing, footwear or accessories, MY LOOK offers you the ideal combination of fashion and functionality for men, women and kids. You will realise that the sky is the limit when it comes
-                to the types of outfits that you can purchase for different occasions.
-            </p>
-        </div>
-        <div id="sub">
-            <p>1.</p>
-            <p id="para"><span>Smart men's clothing</span> - At MY LOOK you will find myriad options in smart formal shirts and trousers, cool T-shirts and jeans, or kurta and pyjama combinations for men. Wear your
-                attitude with printed T-shirts_ Create the back-to-campus vibe with varsity T-shirts and distressed jeans_ Be it gingham, buffalo, or window-pane style, checked shirts are unbeatably
-                smart_ Team them up with chinos, cuffed jeans or cropped trousers for a smart casual Look. Opt for a stylish layered Look with biker jackets Head out in cloudy weather with courage
-                in water-resistant jackets. Browse through our innerwear section to find supportive garments which would keep you confident in any outfit.
-            </p>
-        </div>
-        <div id="sub">
-            <p>2.</p>
-            <p id="para"><span>Trendy women's clothing</span>  - Online shopping for women at MY LOOK is a mood-elevating experience. Look hip and stay comfortable with chinos and printed shorts this summer. Look
-                hot on your date dressed in a little black dress, or opt for red dresses for a sassy vibe. Striped dresses and T-shirts represent the classic spirit of nautical fashion. Choose your
-                favourites from among Bardot, off-shoulder, shirt-style, blouson, embroidered and peplum tops, to name a few Team them up with skinny-fit jeans, skirts or palazzos Kurtis and
-                jeans make the perfect fusion-wear combination for the cool urbanite. Our grand sarees and lehenga-choli selections are perfect to make an impression at big social events such as
-                weddings. Our salwar-kameez sets, kurtas and Patiala suits make comfortable options for regular wear.
-            </p>
-        </div>
-        <div id="sub">
-            <p>3.</p>
-            <p id="para"><span>Fashionable footwear</span>   - While clothes maketh the man, the type of footwear you wear reflects your personality_ We bring you an exhaustive lineup of options in casual shoes for
-                men, such as sneakers and loafers. Make a power statement at work dressed in brogues and oxfords. Practice for your marathon with running shoes for men and women. Choose
-                shoes for individual games such as tennis football, basketball, and the like. or step into the casual style and comfort offered by sandals, sliders, and flip-flops. Explore our lineup of
-                fashionable footwear for ladies, including pumps, heeled boots, wedge-heels and pencil-heels. Or enjoy the best of comfort and style with embellished and metallic flats.
-            </p>
-        </div>
-        <div id="sub">
-            <p>4.</p>
-            <p id="para"><span>Stylish accessories</span>    - MY LOOK is one of the best online shopping sites for classy accessories that perfectly complement your outfits. You can select smart analogue or digital watches
-                and match them up with belts and ties. Pick up spacious bags, backpacks, and wallets to store your essentials in style. Whether you prefer minimal jewellery or grand and sparkling
-                pieces, our online jewellery collection offers you many impressive options.
-            </p>
-        </div>
-        <div id="sub">
-            <p>5.</p>
-            <p id="para"><span>Fun and frolic</span> - Online shopping for kids at MY LOOK is a complete joy. Your little princess is going to love the wide variety of pretty dresses, ballerina shoes, headbands and clips.
-                Delight your son by picking up sports shoes, superhero T-shirts, football jerseys and much more from our online store. Check out our lineup of toys with which you can create
-                memories to cherish.
-            </p>
-        </div>
-        <div id="sub">
-            <p>6.</p>
-            <p id="para"><span>Beauty begins here</span> 
-                 - You can also refresh, rejuvenate and reveal beautiful skin with personal care, beauty and grooming products from MY BOOK_ Our soaps, shower gels, skin care
-                creams, lotions and other ayurvedic products are specially formulated to reduce the effect of aging and offer the ideal cleansing experience. Keep your scalp clean and your hair
-                uber-stylish with shampoos and hair care products. Choose makeup to enhance your natural beauty-
-            </p>
-        </div>
-        <div id="footer2">
-            <p id="top20">
-                My Look is one of the best online shopping sites in India which could help transform your living spaces completely. Add colour and personality to your bedrooms with bed linen and
-                curtains. Use smart tableware to impress your guest. Wall decor, clocks, photo frames and artificial plants are sure to breathe life into any corner of your home.
-            </p>
-        </div>
-        <div id="footer2">
-            <h5 id="title">AFFORDABLE FASHION AT YOUR FINGERTIPS</h5>
-            <p>
-                My Look is one of the unique online shopping sites in India where fashion is accessible to all. Check out our new arrivals to view the latest designer clothing, footwear and accessories in the
-                market You can get your hands on the trendiest style every season in western wear You can also avail the best of ethnic fashion during all Indian festive occasions. You are sure to be
-                impressed with our seasonal discounts on footwear, trousers, shirtsr backpacks and more. The end-of-season sale is the ultimate experience when fashion gets unbelievably affordable. 
-            </p>
-        </div>
-        <div id="footer2">
-            <h5 id="title">MY LOOK INSIDER</h5>
-            <p>Every online shopping experience is precious. Hence, a cashless reward-based customer loyalty program called My Look Insider was introduced to enhance your online experience. The
-                program is applicable to every registered customer and measures rewards in the form of Insider Points.
-            </p>
-            <p>There are four levels to achieve in the program, as the Insider Points accumulate. They are - Insider, Select, Elite or Icon. Apart from offering discounts on My Look and partner platform
-                coupons, each tier comes with its own special perks.
-            </p>
-        </div>
-        <div id="footer4">
-            <h5 id="title">Insider</h5>
-            <div id="sub-dot">
-                <p id="dot">&#x2022</p>
-                <p id="dot">Opportunity to master any domain in fashion with tips from celebrity stylists at My Look Masterclass sessions.
-                </p>
-            </div > 
-            <div id="sub-dot">
-                <p id="dot">&#x2022</p>
-                <p id="dot">Curated collections from celeb stylists. 
-                </p>
-            </div > 
-            <h5 id="title">Elite</h5>
-            <div id="sub-dot">
-                <p id="dot">&#x2022</p>
-                <p id="dot">VIP access to special sale events such as the End of Reason Sale (EORS) and product launches.
-                </p>
-            </div > 
-            <div id="sub-dot">
-                <p id="dot">&#x2022</p>
-                <p id="dot">Exclusive early access to Limited Edition products 
-                </p>
-            </div > 
-            <h5 id="title">Icon</h5>
-            <div id="sub-dot">
-                <p id="dot">&#x2022</p>
-                <p id="dot">Chance to get on guest lists for special events.
-                </p>
-            </div > 
-        </div>
-        <div id="footer2">
-            <h5 id="title">MY LOOK Studio - The Personalised Fashion Feed You Wouldn't Want To Miss Out On</h5>
-            <p>
-                The world wide web is evolving at a relentless pace, and with an accelerated growth each passing year, there is bound to be an overwhelming surge of online content. It was for this very
-                reason that personalisation of search feeds was proposed as a solution to combat the overload of irrelevant information. 
-            </p>
-            <p>
-                Several social media platforms such as Facebook and Instagram along with various online shopping websites have chosen to help filter content, increasing user engagement, retention and
-                customer loyalty.
-            </p>
-            <p>
-                MY LOOK is one such online shopping website that joins the list of platforms that help curate a personalised fashion feed. Named theMY LOOK Studio, this personalised search feed brings you
-                the latest men and women's fashion trends, celebrity styles, branded content and daily updates from your favourite fashion labels.
-            </p>
-            <p>
-                If you are wondering how impactful MY LOOK Studio can be, we are listing out five perks of having a rich, meaningful, and personalised fashion feed in your life.
-            </p>
-        </div>
-        <div id="sub2">
-            <p>1.</p>
-            <div>
-                <p id="para">Keep Up With What Your Favourite Fashion Icons Are Upto</p>
-                <p>
-                    The #00TD, AKA outfit of the day hashtag trend has been a rage among fashion bloggers and stylists. The whole concept of building an outfit from scratch and showcasing it to a
-                    huge community of enthusiasts using the hashtag has helped individuals with understanding trends and making suitable for daily wear.
-                </p>
-                <p>Imagine if you could keep up with every piece of clothing and accessory worn by the fashion icons you look upto. From Sonam Kapoor to Hailey Baldwin Bieber, MY LOOK Studio has a
-                    'Stories' feature to help track celebrity fashion trends, exploring details such as their outfit of the day. This way, you would not ever miss out on the latest celebrity fashion trends,
-                    from all around the world.
-                </p>
-            </div>
-            
-        </div>
-        <div id="sub2">
-            <p>2.</p>
-            <div>
-                <p id="para">Quick Fashion TIP And Tricks</p>
-                <p>
-                    Whether it is draping a saree into a dhoti style, wearing the right lingerie under certain dresses or discovering multiple uses out of heavy ethnic wear, MY LOOK Studio will help you
-                    acquire some unique and useful fashion hacks. Each hack is designed with the intention to help you get the best wear out of everything in your wardrobe.
-                </p>
-            </div>
-        </div>
-        <div id="sub2">
-            <p>3.</p>
-            <div>
-                <p id="para">Updates on What Is Trending and New Product Launches</p>
-                <p>
-                    Since fast fashion seems to be extremely hard to keep up with these days, a quick update on what is trending in accessories, clothing and footwear would certainly be of great help.
-                    MY LOOK Studio helps you stay connected to the most beloved and sought after brands such as Puma, Coverstory, The Label Life and so many more.
-                </p>
-                <p>
-                    Your feed keeps you updated with stories of what the brands are creating including clothing, footwear and jewellery, along with their new seasonal collections.
-                </p>
-            </div>
-        </div>
-        <div id="sub2">
-            <p>4.</p>
-            <div>
-                <p id="para">Explicit Step-By-Step Beauty Routines From Experts</p>
-                <p>
-                    Just like fashion, the beauty community keeps on growing, and with brands such as Huda Beauty, MAC and the latest Kay Beauty by Katrina Kaif, are constantly coming up with
-                    mind-blowing products. Whether it is creating a no-makeup look, different winged eyeliners, do-it-yourself facial masks and other personal care beauty routines, MY LOOK Studio is
-                    here for you.
-                </p>
-            </div>
-        </div>
-        <div id="sub2">
-            <p>5.</p>
-            <div>
-                <p id="para">Celebrity Confessions And A Look Into Their Lives</p>
-                <p>
-                    A bonus feature that MY LOOK Studio has in store for you is celebrity confessions and a peek into their lives. So, MY LOOK helps you stay connected to your most beloved celebrities in a
-                    matter of clicks.
-                </p>
-                <p>
-                    If you are very particular when it comes to the content you wish to view and engage with on social media, the ability to intricately filter content helps achieve that Applying the
-                    same formula for hardcore fashion lovers and shoppers, MY LOOK Studio brings you a daily fashion fix incorporating everything that you love, all at one place. Sign up on MY LOOK today
-                    and start organising your fashion feed just the way you want to.
-                </p>
-            </div>
-        </div>
-        <div id="footer2">
-            <h5 id="title">MY LOOK APP</h5>
-            <p>
-                MY LOOK, India's no. 1 online fashion destination justifies its fashion relevance by bringing something new and chic to the table on the daily. Fashion trends seem to change at lightning
-                speed, yet the MY LOOK shopping app has managed to keep up without any hiccups. In addition, MY LOOK has vowed to serve customers to the best of its ability by introducing its first-ever
-                loyalty program, The MY LOOK Insider. Gain access to priority delivery early sales, lucrative deals and other special perks on all your shopping with the MY LOOK app. Download the MY LOOK
-                app on your Android or IOS device today and experience shopping like never before!
-            </p>
-        </div>
-        <div id="footer2">
-            <h5 id="title">HISTORY OF MY LOOK</h5>
-            <p>
-                Becoming India's no. 1 fashion destination is not an easy feat. Sincere efforts, digital enhancements and a team of dedicated personnel with an equally loyal customer base have made
-                MY LOOK the online platform that it is today The original B2B venture for personalized gifts was conceived in 2007 but transitioned into a full-fledged ecommerce giant within a span of just
-                a few years_ By 2012, MY LOOK had introduced 350 Indian and international brands to its platform, and this has only grown in number each passing year. Today MY LOOK sits on top of the
-                online fashion game with an astounding social media following, a loyalty program dedicated to its customers, and tempting, hard-to-say-no-to deals.
-                app on your Android or IOS device today and experience shopping like never before!
-            </p>
-            <p>
-                The MY LOOK shopping app came into existence in the year 2015 to further encourage customers' shopping sprees. Download the app on your Android or IOS device this very minute to
-                experience fashion like never before
-            </p>
-        </div>
         
+        
+        </p>
+    
+        <h5>Stylofy APP</h5>
+        <p>
+            Stylofy, India's no. 1 online fashion destination justifies its fashion relevance by bringing something new and chic to the table on the daily. Fashion trends seem to change at lightning speed, yet the Stylofy shopping app has managed to keep up without any hiccups. In addition, Stylofy has vowed to serve customers to the best of its ability by introducing its first-ever loyalty program, The Stylofy Insider. Gain access to priority delivery, early sales, lucrative deals and other special perks on all your shopping with the Stylofy app. Download the Stylofy app on your Android or IOS device today and experience shopping like never before!
+        </p>
+    
+        <h5>HISTORY OF Stylofy</h5>
+        <p>
+            Becoming India's no. 1 fashion destination is not an easy feat. Sincere efforts, digital enhancements and a team of dedicated personnel with an equally loyal customer base have made Stylofy the online platform that it is today. The original B2B venture for personalized gifts was conceived in 2007 but transitioned into a full-fledged ecommerce giant within a span of just a few years. By 2012, Stylofy had introduced 350 Indian and international brands to its platform, and this has only grown in number each passing year. Today Stylofy sits on top of the online fashion game with an astounding social media following, a loyalty program dedicated to its customers, and tempting, hard-to-say-no-to deals.
+            <br><br>
+            The Stylofy shopping app came into existence in the year 2015 to further encourage customers' shopping sprees. Download the app on your Android or IOS device this very minute to experience fashion like never before
+        </p>
+    
+        <h5>SHOP ONLINE AT Stylofy WITH COMPLETE CONVENIENCE</h5>
+        <p>
+            Another reason why Stylofy is the best of all online stores is the complete convenience that it offers. You can view your favourite brands with price options for different products in one place. A user-friendly interface will guide you through your selection process. Comprehensive size charts, product information and high-resolution images help you make the best buying decisions. You also have the freedom to choose your payment options, be it card or cash-on-delivery. The 30-day returns policy gives you more power as a buyer. Additionally, the try-and-buy option for select products takes customer-friendliness to the next level.
+            <br> <br>
+            Enjoy the hassle-free experience as you shop comfortably from your home or your workplace. You can also shop for your friends, family and loved-ones and avail our gift services for special occasions.
+        </p>
+        <br><br>
+    
+    
+    
+    </div>
+    </div>
 
-    </div>   
+
+
 </body>
-<script src="index.js"></script>
+</html>
 <script>
-    window.onscroll = function(){myFunction()}
-var navbar = document.getElementById("nav_shadow")
-var sticky = nav_shadow.offsetTop;
-function myFunction(){
-    if(window.pageYOffset >= sticky){
-        nav_shadow.classList.add("sticky")
-    }
-    else{
-        nav_shadow.classList.remove("sticky")
-    }
+    const slideshow = document.querySelector('.slideshow');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+const slideWidth = slideshow.clientWidth;
+let slideIndex = 0;
+
+function showSlide() {
+  slideshow.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
 }
 
+function prevSlide() {
+  if (slideIndex === 0) {
+    slideIndex = slideshow.children.length - 1;
+  } else {
+    slideIndex--;
+  }
+  showSlide();
+}
 
+function nextSlide() {
+  if (slideIndex === slideshow.children.length - 1) {
+    slideIndex = 0;
+  } else {
+    slideIndex++;
+  }
+  showSlide();
+}
+
+prevBtn.addEventListener('click', prevSlide);
+nextBtn.addEventListener('click', nextSlide);
+
+showSlide();
+setInterval(nextSlide, 5000); 
 </script>
 
-</html>
