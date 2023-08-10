@@ -6,6 +6,8 @@
 
 The Stylofy project is a web application designed to replicate the core shopping features of Myntra. It allows users to explore fashion products, manage their shopping bag, wishlist, and complete purchases using simulated card payments. This documentation provides an overview of the project's features, technologies, and concepts.
 
+![Landing Page](files/cover.PNG)
+
 ## Features and Concepts
 
 ### User Interface
@@ -22,13 +24,19 @@ The Stylofy project is a web application designed to replicate the core shopping
 
 - **Product Details Page**: Shows detailed information about a selected product, including images, descriptions, and reviews.
 
+![Product Page](files/1.PNG)
+
 ### User Management
 
 - **Login and Signup Pages**: Allow users to authenticate or create accounts to access personalized features.
 
+![User Page](files/2.PNG)
+
 ### Shopping Flow
 
 - **Wishlist Page**: Enables users to manage their list of preferred products using LocalStorage.
+
+![User Page](files/3.PNG)
 
 - **Shopping Bag Page**: Displays selected products, quantities, and total prices. Calculates the total price dynamically.
 
@@ -37,6 +45,8 @@ The Stylofy project is a web application designed to replicate the core shopping
 - **Payment Page**: Simulates a card payment process for completing purchases.
 
 - **Order Placement**: Displays a success message after successful payment, and allows users to continue shopping.
+
+
 
 ### Responsive Design
 
